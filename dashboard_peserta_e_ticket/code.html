@@ -26,10 +26,6 @@ globalThis.tailwind.config = {
         'light-on-secondary': '#FFFFFF',
         'light-secondary-container': '#FD651E',
         'light-on-secondary-container': '#571A00',
-        'light-tertiary': '#793230',
-        'light-on-tertiary': '#FFFFFF',
-        'light-tertiary-container': '#974946',
-        'light-on-tertiary-container': '#FFD1CE',
         'light-error': '#BA1A1A',
         'light-on-error': '#FFFFFF',
         'light-error-container': '#FFDAD6',
@@ -37,55 +33,16 @@ globalThis.tailwind.config = {
         'light-background': '#F9F9FF',
         'light-on-background': '#111C2D',
         'light-surface': '#F9F9FF',
-        'light-surface-dim': '#CFDAF2',
-        'light-surface-bright': '#F9F9FF',
         'light-surface-container-lowest': '#FFFFFF',
         'light-surface-container-low': '#F0F3FF',
         'light-surface-container': '#E7EEFF',
         'light-surface-container-high': '#DEE8FF',
-        'light-surface-container-highest': '#D8E3FB',
         'light-on-surface': '#111C2D',
-        'light-surface-variant': '#DAE5DD',
         'light-on-surface-variant': '#3F4943',
         'light-outline': '#6F7A73',
         'light-outline-variant': '#BEC9C1',
         'light-inverse-surface': '#263143',
-        'light-inverse-on-surface': '#ECF1FF',
-        'light-inverse-primary': '#83D7B0',
-        'dark-primary': '#83D7B0',
-        'dark-on-primary': '#003826',
-        'dark-primary-container': '#0D6E4E',
-        'dark-on-primary-container': '#98EDC5',
-        'dark-secondary': '#FFB599',
-        'dark-on-secondary': '#5A1C00',
-        'dark-secondary-container': '#F66018',
-        'dark-on-secondary-container': '#320C00',
-        'dark-tertiary': '#FFB3AF',
-        'dark-on-tertiary': '#5A1A1A',
-        'dark-tertiary-container': '#974946',
-        'dark-on-tertiary-container': '#FFD1CE',
-        'dark-error': '#FFB4AB',
-        'dark-on-error': '#690005',
-        'dark-error-container': '#93000A',
-        'dark-on-error-container': '#FFDAD6',
-        'dark-background': '#081425',
-        'dark-on-background': '#D8E3FB',
-        'dark-surface': '#081425',
-        'dark-surface-dim': '#081425',
-        'dark-surface-bright': '#2F3A4C',
-        'dark-surface-container-lowest': '#040E1F',
-        'dark-surface-container-low': '#111C2D',
-        'dark-surface-container': '#152031',
-        'dark-surface-container-high': '#1F2A3C',
-        'dark-surface-container-highest': '#2A3548',
-        'dark-on-surface': '#D8E3FB',
-        'dark-surface-variant': '#3F4943',
-        'dark-on-surface-variant': '#BEC9C1',
-        'dark-outline': '#88938C',
-        'dark-outline-variant': '#3F4943',
-        'dark-inverse-surface': '#D8E3FB',
-        'dark-inverse-on-surface': '#263143',
-        'dark-inverse-primary': '#086C4C',
+        'light-inverse-on-surface': '#ECF1FF'
       },
       borderRadius: {
         'sm': '4px',
@@ -93,16 +50,14 @@ globalThis.tailwind.config = {
         'md': '12px',
         'lg': '16px',
         'xl': '24px',
-        'full': '9999px',
+        'full': '9999px'
       },
       spacing: {
         'gutter-xs': '4px',
         'gutter-sm': '8px',
         'gutter-md': '16px',
         'gutter-lg': '24px',
-        'gutter-xl': '32px',
-        'section': '48px',
-        'page-margin': '24px',
+        'gutter-xl': '32px'
       },
       fontFamily: {
         'display': ['"Instrument Sans"', 'sans-serif'],
@@ -110,100 +65,85 @@ globalThis.tailwind.config = {
         'title': ['"Instrument Sans"', 'sans-serif'],
         'body': ['"Alata"', 'sans-serif'],
         'label': ['"Instrument Sans"', 'sans-serif'],
-        'mono': ['"Red Hat Mono"', 'monospace'],
+        'mono': ['"Red Hat Mono"', 'monospace']
       },
       fontSize: {
-        'display-lg': ['48px', { lineHeight: '54px', letterSpacing: '-0.5px', fontWeight: '700' }],
-        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.25px', fontWeight: '700' }],
-        'headline-lg': ['34px', { lineHeight: '42px', letterSpacing: '-0.25px', fontWeight: '700' }],
-        'headline-lg-mobile': ['26px', { lineHeight: '32px', letterSpacing: '-0.15px', fontWeight: '700' }],
         'headline-md': ['24px', { lineHeight: '30px', letterSpacing: '-0.1px', fontWeight: '700' }],
-        'title-lg': ['20px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '600' }],
-        'title-md': ['16px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '600' }],
-        'body-lg': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
-        'body-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+        'title-lg': ['20px', { lineHeight: '26px', fontWeight: '600' }],
+        'title-md': ['16px', { lineHeight: '22px', fontWeight: '600' }],
+        'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }],
         'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.1px', fontWeight: '600' }],
         'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '600' }],
-        'mono-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
-        'mono-lg': ['20px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '600' }],
-      },
-      transitionDuration: {
-        'state-change': '100ms',
-        'surface-enter': '200ms',
-        'surface-exit': '150ms',
-      },
-      transitionDelay: {
-        'state-change': '0ms',
-        'surface-enter': '0ms',
-        'surface-exit': '0ms',
-      },
-      transitionTimingFunction: {
-        'state-change': 'ease-out',
-        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
-        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
-      },
-    },
-  },
+        'mono-md': ['14px', { lineHeight: '20px', fontWeight: '500' }],
+        'mono-lg': ['20px', { lineHeight: '26px', fontWeight: '600' }]
+      }
+    }
+  }
 };
-if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
 </script>
   <link href="https://fonts.googleapis.com/css2?family=Alata&amp;family=Instrument+Sans:wght@500;600;700&amp;family=Red+Hat+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
   <style>.material-symbols-outlined { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+  <script src="../shared/store.js"></script>
+  <script src="../shared/ui.js"></script>
 </head>
-<body class="bg-light-surface text-light-on-surface font-body antialiased min-h-[1024px] flex" data-stitch-vh="min-h-[1024px]===min-h-screen">
+<body class="bg-light-surface text-light-on-surface font-body antialiased min-h-screen flex flex-col md:flex-row">
 
   <!-- Participant Sidebar -->
-  <aside class="w-64 bg-light-surface-container-lowest border-r border-light-outline-variant/60 min-h-[1024px] flex flex-col justify-between p-gutter-md shrink-0" data-stitch-vh="min-h-[1024px]===min-h-screen">
+  <aside class="w-full md:w-64 bg-light-surface-container-lowest border-b md:border-b-0 md:border-r border-light-outline-variant/60 flex flex-col justify-between p-gutter-md shrink-0">
     <div class="flex flex-col gap-gutter-lg">
-      <a href="../halaman-utama/HalamanUtama.html" class="flex items-center gap-gutter-sm px-2 pt-2">
-        <span class="w-8 h-8 rounded bg-light-primary text-light-on-primary flex items-center justify-center font-headline text-title-md">SR</span>
-        <div class="flex flex-col">
-          <span class="font-headline text-title-md text-light-on-surface leading-none" data-design-text-token="title-md">SAID RUN</span>
-          <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Portal Peserta</span>
-        </div>
-      </a>
+      <div class="flex items-center justify-between px-2 pt-1">
+        <a href="../halaman_utama_info_event/code.html" class="flex items-center gap-gutter-sm">
+          <span class="w-8 h-8 rounded bg-light-primary text-light-on-primary flex items-center justify-center font-headline text-title-md">SR</span>
+          <div class="flex flex-col">
+            <span class="font-headline text-title-md text-light-on-surface leading-none">SAID RUN</span>
+            <span class="font-label text-label-sm text-light-on-surface-variant">Portal Peserta</span>
+          </div>
+        </a>
+        <a href="../halaman_utama_info_event/code.html" class="md:hidden font-label text-label-sm text-light-primary">Beranda</a>
+      </div>
 
-      <nav class="flex flex-col gap-gutter-xs" aria-label="Menu peserta">
-        <button type="button" onclick="switchParticipantTab(&#39;tiket&#39;)" id="ptab-btn-tiket" class="w-full flex items-center gap-gutter-sm px-3 py-2.5 rounded bg-light-surface-container-low text-light-primary font-label text-label-lg text-left">
+      <nav class="grid grid-cols-2 md:flex md:flex-col gap-gutter-xs" aria-label="Menu peserta">
+        <button type="button" onclick="switchParticipantTab('tiket')" id="ptab-btn-tiket" class="w-full flex items-center gap-gutter-sm px-3 py-2.5 rounded bg-light-surface-container-low text-light-primary font-label text-label-lg text-left">
           <span class="material-symbols-outlined" style="font-size: 20px;" aria-hidden="true">qr_code_2</span>
           <span>Status &amp; E-Ticket</span>
         </button>
-        <button type="button" onclick="switchParticipantTab(&#39;racepack&#39;)" id="ptab-btn-racepack" class="w-full flex items-center gap-gutter-sm px-3 py-2.5 rounded text-light-on-surface-variant hover:bg-light-surface-container-low font-label text-label-lg text-left">
+        <button type="button" onclick="switchParticipantTab('racepack')" id="ptab-btn-racepack" class="w-full flex items-center gap-gutter-sm px-3 py-2.5 rounded text-light-on-surface-variant hover:bg-light-surface-container-low font-label text-label-lg text-left">
           <span class="material-symbols-outlined" style="font-size: 20px;" aria-hidden="true">inventory_2</span>
           <span>Informasi Race Pack</span>
         </button>
-        <button type="button" onclick="switchParticipantTab(&#39;perubahan&#39;)" id="ptab-btn-perubahan" class="w-full flex items-center gap-gutter-sm px-3 py-2.5 rounded text-light-on-surface-variant hover:bg-light-surface-container-low font-label text-label-lg text-left">
+        <button type="button" onclick="switchParticipantTab('perubahan')" id="ptab-btn-perubahan" class="w-full flex items-center gap-gutter-sm px-3 py-2.5 rounded text-light-on-surface-variant hover:bg-light-surface-container-low font-label text-label-lg text-left">
           <span class="material-symbols-outlined" style="font-size: 20px;" aria-hidden="true">edit_note</span>
           <span>Perubahan Data</span>
         </button>
-        <button type="button" onclick="switchParticipantTab(&#39;hasil&#39;)" id="ptab-btn-hasil" class="w-full flex items-center gap-gutter-sm px-3 py-2.5 rounded text-light-on-surface-variant hover:bg-light-surface-container-low font-label text-label-lg text-left">
+        <button type="button" onclick="switchParticipantTab('hasil')" id="ptab-btn-hasil" class="w-full flex items-center gap-gutter-sm px-3 py-2.5 rounded text-light-on-surface-variant hover:bg-light-surface-container-low font-label text-label-lg text-left">
           <span class="material-symbols-outlined" style="font-size: 20px;" aria-hidden="true">emoji_events</span>
           <span>Hasil &amp; E-Certificate</span>
         </button>
       </nav>
     </div>
 
-    <div class="p-gutter-sm rounded-lg bg-light-surface-container-low border border-light-outline-variant/50 flex flex-col gap-gutter-xs">
-      <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Luthfiya Zuhura</span>
-      <span class="font-mono text-mono-md text-light-on-surface-variant" data-design-text-token="mono-md">BIB 5K-0142</span>
-      <a href="../halaman-utama/HalamanUtama.html" class="font-label text-label-sm text-light-primary hover:underline pt-1">Keluar Akun</a>
+    <div class="mt-4 md:mt-0 p-gutter-sm rounded-lg bg-light-surface-container-low border border-light-outline-variant/50 flex flex-col gap-gutter-xs">
+      <label class="flex flex-col gap-1">
+        <span class="font-label text-label-sm text-light-on-surface-variant">Akun Aktif (Demo Switcher)</span>
+        <select id="account-switcher" onchange="onSwitchAccount(this.value)" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-2 py-1.5 font-body text-body-md text-light-on-surface"></select>
+      </label>
+      <span id="sidebar-bib" class="font-mono text-mono-md text-light-on-surface-variant pt-1">BIB 5K-0142</span>
+      <div class="flex items-center justify-between pt-1">
+        <a href="../halaman_utama_info_event/code.html" class="font-label text-label-sm text-light-primary hover:underline">Beranda Event</a>
+        <a href="../dashboard_admin_check_in_qr/code.html" class="font-label text-label-sm text-light-on-surface-variant hover:text-light-primary">Portal Admin</a>
+      </div>
     </div>
   </aside>
 
   <!-- Main Content -->
   <div class="flex-1 flex flex-col min-w-0">
-    <header class="h-16 bg-light-surface-container-lowest border-b border-light-outline-variant/60 px-gutter-xl flex items-center justify-between">
-      <h1 class="font-headline text-title-lg text-light-on-surface" data-design-text-token="title-lg">Dashboard Peserta — SAID RUN 2026</h1>
-      <div class="flex items-center gap-gutter-sm">
-        <span data-component-id="badge-success" data-component-type="badge" data-component-variant="success" role="status" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-success-container text-on-success-container font-label text-label-sm">
-          <span class="w-1.5 h-1.5 rounded-full bg-success" aria-hidden="true"></span>
-          <span data-design-text-token="label-sm">Pendaftaran Terverifikasi</span>
-        </span>
-      </div>
+    <header class="h-16 bg-light-surface-container-lowest border-b border-light-outline-variant/60 px-gutter-lg md:px-gutter-xl flex items-center justify-between gap-2">
+      <h1 class="font-headline text-title-lg text-light-on-surface truncate">Dashboard Peserta — SAID RUN 2026</h1>
+      <div id="header-status-badge" class="flex items-center gap-gutter-sm shrink-0"></div>
     </header>
 
-    <main class="flex-1 p-gutter-xl max-w-5xl w-full flex flex-col gap-gutter-xl">
+    <main class="flex-1 p-gutter-lg md:p-gutter-xl max-w-5xl w-full flex flex-col gap-gutter-xl">
 
       <!-- TAB 1: Status & E-Ticket -->
       <section id="ptab-panel-tiket" class="flex flex-col gap-gutter-lg">
@@ -212,60 +152,76 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
           <article class="lg:col-span-7 bg-light-surface-container-lowest rounded-xl border border-light-outline-variant/60 p-gutter-lg flex flex-col justify-between gap-gutter-lg">
             <div class="flex items-start justify-between gap-gutter-md border-b border-light-outline-variant/40 pb-gutter-md">
               <div>
-                <span class="font-label text-label-sm text-light-primary" data-design-text-token="label-sm">E-TICKET RESMI SAID RUN 2026</span>
-                <h2 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">Luthfiya Zuhura</h2>
-                <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Civitas UIN RMS • 5K Fun Run • Jersey Ukuran M</p>
+                <span class="font-label text-label-sm text-light-primary">E-TICKET RESMI SAID RUN 2026</span>
+                <h2 id="et-name" class="font-headline text-headline-md text-light-on-surface">Luthfiya Zuhura</h2>
+                <p id="et-meta" class="font-body text-body-md text-light-on-surface-variant">Civitas UIN RMS • 5K Fun Run • Jersey Ukuran M</p>
               </div>
-              <div class="text-right">
-                <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Nomor BIB</span>
-                <p class="font-mono text-mono-lg text-light-primary tabular-nums" data-design-text-token="mono-lg">5K-0142</p>
+              <div class="text-right shrink-0">
+                <span class="font-label text-label-sm text-light-on-surface-variant">Nomor BIB</span>
+                <p id="et-bib" class="font-mono text-mono-lg text-light-primary tabular-nums">5K-0142</p>
               </div>
             </div>
 
-            <div class="flex flex-col sm:flex-row items-center gap-gutter-lg">
-              <div class="w-36 h-36 bg-light-surface-container-low rounded-lg border border-light-outline-variant flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined text-light-on-surface" style="font-size: 104px;" aria-hidden="true">qr_code_2</span>
-              </div>
+            <div id="et-qr-body" class="flex flex-col sm:flex-row items-center gap-gutter-lg">
+              <div id="et-qr-svg" class="p-2 bg-white rounded-lg border border-light-outline-variant flex items-center justify-center shrink-0"></div>
               <div class="flex flex-col gap-gutter-xs">
-                <span class="font-mono text-mono-md text-light-on-surface" data-design-text-token="mono-md">TOKEN: SR26-QR-5K0142</span>
-                <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span id="et-token" class="font-mono text-mono-md text-light-on-surface">TOKEN: SR26-QR-5K0142</span>
+                  <button type="button" onclick="copyQrToken()" class="px-2 py-0.5 rounded bg-light-surface-container-low text-light-primary font-label text-label-sm hover:bg-light-surface-container">Salin</button>
+                </div>
+                <p id="et-instruction" class="font-body text-body-md text-light-on-surface-variant">
                   Tunjukkan QR code ini kepada petugas saat pengambilan Race Pack pada 19 September 2026. Satu e-ticket hanya berlaku untuk satu kali pengambilan.
                 </p>
+                <div id="et-pending-action" class="hidden pt-2">
+                  <button type="button" onclick="payFromDashboard()" class="inline-flex items-center gap-2 px-4 py-2 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
+                    <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">qr_code_2</span>
+                    <span>Simulasikan Bayar QRIS Sekarang</span>
+                  </button>
+                </div>
               </div>
             </div>
 
             <footer class="pt-gutter-md border-t border-light-outline-variant/40 flex flex-wrap items-center justify-between gap-gutter-sm">
-              <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Status Race Pack: Belum Diambil</span>
-              <button type="button" onclick="switchParticipantTab(&#39;racepack&#39;)" class="px-4 py-2 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
-                <span data-design-text-token="label-lg">Lihat Jadwal Race Pack</span>
-              </button>
+              <span id="et-racepack-status" class="font-label text-label-sm text-light-on-surface-variant">Status Race Pack: Belum Diambil</span>
+              <div class="flex items-center gap-2">
+                <button type="button" onclick="window.print()" class="px-3.5 py-2 rounded bg-light-surface-container-low text-light-primary border border-light-outline-variant font-label text-label-sm hover:bg-light-surface-container">
+                  Cetak E-Ticket
+                </button>
+                <button type="button" onclick="switchParticipantTab('racepack')" class="px-4 py-2 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
+                  Lihat Jadwal Race Pack
+                </button>
+              </div>
             </footer>
           </article>
 
           <!-- Ringkasan Status & Pengingat -->
           <div class="lg:col-span-5 flex flex-col gap-gutter-md">
             <article class="bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-sm">
-              <h3 class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Detail Transaksi</h3>
+              <h3 class="font-title text-title-md text-light-on-surface">Detail Transaksi</h3>
+              <div class="flex justify-between font-body text-body-md">
+                <span class="text-light-on-surface-variant">ID Transaksi</span>
+                <span id="tx-id" class="font-mono text-mono-md text-light-on-surface">TRX-SR26-08914</span>
+              </div>
               <div class="flex justify-between font-body text-body-md">
                 <span class="text-light-on-surface-variant">Metode</span>
                 <span class="text-light-on-surface">QRIS Otomatis</span>
               </div>
               <div class="flex justify-between font-body text-body-md">
                 <span class="text-light-on-surface-variant">Nominal</span>
-                <span class="font-mono text-mono-md text-light-on-surface tabular-nums">Rp 115.000</span>
+                <span id="tx-amount" class="font-mono text-mono-md text-light-on-surface tabular-nums">Rp 115.000</span>
               </div>
               <div class="flex justify-between font-body text-body-md">
                 <span class="text-light-on-surface-variant">Asuransi Lomba</span>
-                <span class="text-light-primary">Aktif (E-Polis Terkirim)</span>
+                <span id="tx-insurance" class="text-light-primary">Aktif (E-Polis Terkirim)</span>
               </div>
             </article>
 
             <article class="bg-light-surface-container-low rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-xs">
               <div class="flex items-center gap-gutter-sm text-light-primary">
                 <span class="material-symbols-outlined" style="font-size: 20px;" aria-hidden="true">mark_email_read</span>
-                <h3 class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Pengingat Email Aktif</h3>
+                <h3 class="font-title text-title-md text-light-on-surface">Pengingat Email Aktif</h3>
               </div>
-              <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">
+              <p id="tx-email-note" class="font-body text-body-md text-light-on-surface-variant">
                 Pengingat pengambilan race pack dijadwalkan terkirim ke email Anda pada H-14, H-7, dan H-1.
               </p>
             </article>
@@ -275,57 +231,62 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
 
       <!-- TAB 2: Informasi Race Pack -->
       <section id="ptab-panel-racepack" class="hidden bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-md">
-        <h2 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">Informasi Pengambilan Race Pack</h2>
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h2 class="font-headline text-headline-md text-light-on-surface">Informasi Pengambilan Race Pack</h2>
+          <div id="rp-status-pill"></div>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-md">
           <div class="p-gutter-md rounded bg-light-surface-container-low">
-            <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Jadwal</span>
-            <p class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">19 September 2026</p>
+            <span class="font-label text-label-sm text-light-on-surface-variant">Jadwal</span>
+            <p class="font-title text-title-md text-light-on-surface">19 September 2026</p>
             <p class="font-body text-body-md text-light-on-surface-variant">09.00 – 17.00 WIB</p>
           </div>
           <div class="p-gutter-md rounded bg-light-surface-container-low">
-            <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Lokasi</span>
-            <p class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Graha UIN RMS</p>
+            <span class="font-label text-label-sm text-light-on-surface-variant">Lokasi</span>
+            <p class="font-title text-title-md text-light-on-surface">Graha UIN RMS</p>
             <p class="font-body text-body-md text-light-on-surface-variant">Kampus Kartasura, Sukoharjo</p>
           </div>
           <div class="p-gutter-md rounded bg-light-surface-container-low">
-            <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Syarat Pengambilan</span>
-            <p class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">E-Ticket QR &amp; KTP/KTM</p>
-            <p class="font-body text-body-md text-light-on-surface-variant">Wajib sesuai identitas terdaftar</p>
+            <span class="font-label text-label-sm text-light-on-surface-variant">Syarat Pengambilan</span>
+            <p class="font-title text-title-md text-light-on-surface">E-Ticket QR &amp; KTP/KTM</p>
+            <p id="rp-jersey-note" class="font-body text-body-md text-light-on-surface-variant">Jersey Ukuran M</p>
           </div>
         </div>
       </section>
 
       <!-- TAB 3: Pengajuan Perubahan Data -->
       <section id="ptab-panel-perubahan" class="hidden bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-lg">
-        <div class="flex items-center justify-between gap-gutter-md border-b border-light-outline-variant/40 pb-gutter-md">
+        <div class="flex flex-wrap items-center justify-between gap-gutter-md border-b border-light-outline-variant/40 pb-gutter-md">
           <div>
-            <h2 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">Pengajuan Perubahan Data</h2>
-            <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Data lama tetap berlaku hingga pengajuan disetujui oleh Admin/Panitia.</p>
+            <h2 class="font-headline text-headline-md text-light-on-surface">Pengajuan Perubahan Data</h2>
+            <p class="font-body text-body-md text-light-on-surface-variant">Data lama tetap berlaku hingga pengajuan disetujui oleh Admin/Panitia.</p>
           </div>
-          <span class="px-3 py-1 rounded-full bg-warning-container text-on-warning-container font-label text-label-sm" data-design-text-token="label-sm">1 Pengajuan Menunggu Persetujuan</span>
+          <span id="cr-pending-badge" class="px-3 py-1 rounded-full bg-warning-container text-on-warning-container font-label text-label-sm">0 Pengajuan Menunggu</span>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-md">
           <label class="flex flex-col gap-1.5">
-            <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Bagian yang Diubah</span>
-            <select class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface">
-              <option selected>Ukuran Jersey (Saat ini: M)</option>
-              <option>Kategori Lomba (Saat ini: 5K Fun Run)</option>
+            <span class="font-label text-label-lg text-light-on-surface">Bagian yang Diubah</span>
+            <select id="cr-field" onchange="populateChangeOptions()" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface">
+              <option value="Ukuran Jersey">Ukuran Jersey</option>
+              <option value="Kategori Lomba">Kategori Lomba</option>
             </select>
           </label>
           <label class="flex flex-col gap-1.5">
-            <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Nilai Baru yang Diajukan</span>
-            <select class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface">
-              <option value="L" selected>Ukuran L (Tersedia)</option>
-              <option value="S">Ukuran S (Tersedia)</option>
-            </select>
+            <span class="font-label text-label-lg text-light-on-surface">Nilai Baru yang Diajukan</span>
+            <select id="cr-new-value" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface"></select>
           </label>
         </div>
 
         <div class="flex justify-end">
-          <button type="button" class="px-5 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
-            <span data-design-text-token="label-lg">Kirim Pengajuan Perubahan</span>
+          <button type="button" onclick="handleSubmitChangeRequest()" class="px-5 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
+            Kirim Pengajuan Perubahan
           </button>
+        </div>
+
+        <div class="pt-gutter-md border-t border-light-outline-variant/40 flex flex-col gap-gutter-sm">
+          <h3 class="font-title text-title-md text-light-on-surface">Riwayat Pengajuan Anda</h3>
+          <div id="cr-history-list" class="flex flex-col gap-2"></div>
         </div>
       </section>
 
@@ -334,30 +295,30 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
         <article class="bg-light-surface-container-lowest rounded-xl border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-lg">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-gutter-md border-b border-light-outline-variant/40 pb-gutter-md">
             <div>
-              <span class="font-label text-label-sm text-light-primary" data-design-text-token="label-sm">SELAMAT MENYELESAIKAN LOMBA 5K!</span>
-              <h2 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">Hasil Resmi &amp; E-Certificate</h2>
+              <span id="res-subtitle" class="font-label text-label-sm text-light-primary">SELAMAT MENYELESAIKAN LOMBA!</span>
+              <h2 class="font-headline text-headline-md text-light-on-surface">Hasil Resmi &amp; E-Certificate</h2>
             </div>
-            <button type="button" class="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
+            <button type="button" onclick="downloadCertificate()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
               <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">download</span>
-              <span data-design-text-token="label-lg">Unduh E-Certificate (PDF)</span>
+              <span>Unduh E-Certificate (SVG)</span>
             </button>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-gutter-md">
             <div class="p-gutter-md rounded bg-light-surface-container-low">
-              <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Catatan Waktu (Chip Time)</span>
-              <p class="font-mono text-mono-lg text-light-primary tabular-nums" data-design-text-token="mono-lg">00:28:14</p>
+              <span class="font-label text-label-sm text-light-on-surface-variant">Catatan Waktu (Chip Time)</span>
+              <p id="res-chiptime" class="font-mono text-mono-lg text-light-primary tabular-nums">00:28:14</p>
             </div>
             <div class="p-gutter-md rounded bg-light-surface-container-low">
-              <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Peringkat Kategori 5K</span>
-              <p class="font-mono text-mono-lg text-light-on-surface tabular-nums" data-design-text-token="mono-lg">#18 / 842</p>
+              <span class="font-label text-label-sm text-light-on-surface-variant">Peringkat Kategori</span>
+              <p id="res-rank" class="font-mono text-mono-lg text-light-on-surface tabular-nums">#18 / 842</p>
             </div>
             <div class="p-gutter-md rounded bg-light-surface-container-low">
-              <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Foto Peserta (Photo Tagging)</span>
-              <a href="#galeri-foto" class="inline-flex items-center gap-1 font-label text-label-lg text-light-primary hover:underline pt-1">
-                <span>Lihat 14 Foto BIB 5K-0142</span>
+              <span class="font-label text-label-sm text-light-on-surface-variant">Foto Peserta (Photo Tagging)</span>
+              <button type="button" onclick="openPhotoGallery()" class="inline-flex items-center gap-1 font-label text-label-lg text-light-primary hover:underline pt-1 text-left">
+                <span id="res-photos-label">Lihat 14 Foto BIB 5K-0142</span>
                 <span class="material-symbols-outlined" style="font-size: 16px;" aria-hidden="true">open_in_new</span>
-              </a>
+              </button>
             </div>
           </div>
         </article>
@@ -366,7 +327,34 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
     </main>
   </div>
 
+  <!-- Photo Tagging Modal -->
+  <div id="photo-modal" class="hidden fixed inset-0 z-50 bg-light-on-surface/50 flex items-center justify-center p-4" role="dialog" aria-modal="true">
+    <div class="bg-light-surface-container-lowest rounded-xl border border-light-outline-variant w-full max-w-lg p-gutter-lg flex flex-col gap-gutter-md shadow-xl">
+      <div class="flex items-center justify-between border-b border-light-outline-variant/40 pb-gutter-sm">
+        <h3 id="photo-modal-title" class="font-headline text-title-lg text-light-on-surface">Galeri Foto BIB</h3>
+        <button type="button" onclick="document.getElementById('photo-modal').classList.add('hidden')" class="p-1 rounded hover:bg-light-surface-container-low">
+          <span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+        </button>
+      </div>
+      <div class="grid grid-cols-2 gap-gutter-md">
+        <div class="p-4 rounded-lg bg-light-surface-container-low border border-light-outline-variant/60 flex flex-col items-center gap-2 text-center">
+          <span class="material-symbols-outlined text-light-primary" style="font-size: 40px;">directions_run</span>
+          <span class="font-label text-label-sm text-light-on-surface">KM 2.5 • Gerbang Kampus</span>
+          <span class="font-mono text-label-sm text-light-on-surface-variant">Tag Otomatis AI</span>
+        </div>
+        <div class="p-4 rounded-lg bg-light-surface-container-low border border-light-outline-variant/60 flex flex-col items-center gap-2 text-center">
+          <span class="material-symbols-outlined text-light-primary" style="font-size: 40px;">flag</span>
+          <span class="font-label text-label-sm text-light-on-surface">Garis Finish • Graha UIN</span>
+          <span class="font-mono text-label-sm text-light-on-surface-variant">Tag Otomatis AI</span>
+        </div>
+      </div>
+      <p class="font-body text-body-md text-light-on-surface-variant">Semua foto beresolusi tinggi dengan nomor BIB Anda siap diunduh setelah lomba.</p>
+    </div>
+  </div>
+
   <script>
+    var activeParticipant = null;
+
     function switchParticipantTab(tab) {
       var tabs = ['tiket', 'racepack', 'perubahan', 'hasil'];
       for (var i = 0; i < tabs.length; i++) {
@@ -384,8 +372,183 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
         }
       }
     }
+
+    function renderParticipantDashboard() {
+      var db = SaidRunStore.loadDB();
+      var p = SaidRunStore.getActiveParticipant(db);
+      activeParticipant = p;
+
+      // Populate account switcher
+      var switcher = document.getElementById('account-switcher');
+      switcher.innerHTML = db.participants.map(function (item) {
+        var selected = item.id === p.id ? ' selected' : '';
+        return '<option value="' + item.id + '"' + selected + '>' + SaidRunUI.escapeHtml(item.fullName) + ' (' + (item.bib !== '—' ? item.bib : item.status) + ')</option>';
+      }).join('');
+
+      document.getElementById('sidebar-bib').textContent = p.bib !== '—' ? 'BIB ' + p.bib : p.trxId;
+      document.getElementById('header-status-badge').innerHTML = SaidRunUI.renderStatusBadge(p.status);
+
+      // E-Ticket Card
+      var catName = SaidRunStore.getCategoryLabel(p.category);
+      var typeName = SaidRunStore.getParticipantTypeLabel(p.participantType);
+      document.getElementById('et-name').textContent = p.fullName;
+      document.getElementById('et-meta').textContent = typeName + ' • ' + catName + ' • Jersey Ukuran ' + p.jerseySize;
+      document.getElementById('et-bib').textContent = p.bib || '—';
+
+      var qrBox = document.getElementById('et-qr-svg');
+      var tokenEl = document.getElementById('et-token');
+      var instEl = document.getElementById('et-instruction');
+      var pendingActionEl = document.getElementById('et-pending-action');
+
+      if (p.status === 'Terverifikasi') {
+        qrBox.innerHTML = SaidRunUI.generateQrSvg(p.qrToken, 136);
+        tokenEl.textContent = 'TOKEN: ' + p.qrToken;
+        instEl.textContent = 'Tunjukkan QR code ini kepada petugas saat pengambilan Race Pack pada 19 September 2026. Satu e-ticket hanya berlaku untuk satu kali pengambilan.';
+        pendingActionEl.classList.add('hidden');
+      } else {
+        qrBox.innerHTML = SaidRunUI.generateQrSvg(p.trxId, 136);
+        tokenEl.textContent = 'TRX: ' + p.trxId;
+        instEl.textContent = p.status === 'Menunggu Pembayaran'
+          ? 'Pembayaran belum selesai. Selesaikan pembayaran QRIS untuk menerbitkan nomor BIB dan E-Ticket resmi.'
+          : (p.issueNote || 'Transaksi sedang ditinjau oleh Admin/Panitia.');
+        pendingActionEl.classList.toggle('hidden', p.status !== 'Menunggu Pembayaran');
+      }
+
+      document.getElementById('et-racepack-status').textContent = 'Status Race Pack: ' + (p.racePackStatus || '—');
+      document.getElementById('rp-status-pill').innerHTML = SaidRunUI.renderStatusBadge(p.racePackStatus === '—' ? p.status : p.racePackStatus);
+      document.getElementById('rp-jersey-note').textContent = 'Jersey Ukuran ' + p.jerseySize + ' • ' + catName;
+
+      // Transaction summary
+      document.getElementById('tx-id').textContent = p.trxId;
+      document.getElementById('tx-amount').textContent = SaidRunStore.formatRupiah(p.totalAmount);
+      document.getElementById('tx-insurance').textContent = p.insurance ? 'Aktif (E-Polis Terkirim)' : 'Tidak Dipilih';
+      document.getElementById('tx-email-note').textContent =
+        'Pengingat pengambilan race pack dijadwalkan terkirim ke ' + p.email + ' pada H-14, H-7, dan H-1.';
+
+      // Change Requests
+      populateChangeOptions();
+      renderChangeHistory(db, p.id);
+
+      // Results
+      document.getElementById('res-subtitle').textContent = 'SELAMAT MENYELESAIKAN LOMBA ' + (p.category === '10k' ? '10K!' : '5K!');
+      document.getElementById('res-chiptime').textContent = p.chipTime && p.chipTime !== '—' ? p.chipTime : 'Menunggu Lomba';
+      document.getElementById('res-rank').textContent = p.rank && p.rank !== '—' ? p.rank : '—';
+      document.getElementById('res-photos-label').textContent =
+        p.photoCount > 0 ? 'Lihat ' + p.photoCount + ' Foto BIB ' + p.bib : 'Belum Ada Foto';
+    }
+
+    function onSwitchAccount(id) {
+      SaidRunStore.setActiveParticipant(id);
+      renderParticipantDashboard();
+      SaidRunUI.showToast('Berhasil beralih akun peserta.', 'info');
+    }
+
+    function copyQrToken() {
+      if (!activeParticipant) return;
+      var text = activeParticipant.qrToken || activeParticipant.trxId;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text);
+      }
+      SaidRunUI.showToast('Kode ' + text + ' disalin ke clipboard.', 'success');
+    }
+
+    function payFromDashboard() {
+      if (!activeParticipant) return;
+      var updated = SaidRunStore.verifyPayment(activeParticipant.id, 'auto');
+      if (updated) {
+        renderParticipantDashboard();
+        SaidRunUI.showToast('Pembayaran terverifikasi! BIB ' + updated.bib + ' diterbitkan.', 'success');
+      }
+    }
+
+    function populateChangeOptions() {
+      if (!activeParticipant) return;
+      var field = document.getElementById('cr-field').value;
+      var select = document.getElementById('cr-new-value');
+      if (field === 'Ukuran Jersey') {
+        var sizes = ['S', 'M', 'L', 'XL'].filter(function (s) { return s !== activeParticipant.jerseySize; });
+        select.innerHTML = sizes.map(function (s) {
+          return '<option value="' + s + '">Ukuran ' + s + ' (Tersedia)</option>';
+        }).join('');
+      } else {
+        var targetCat = activeParticipant.category === '5k' ? '10K Competitive' : '5K Fun Run';
+        select.innerHTML = '<option value="' + targetCat + '">' + targetCat + '</option>';
+      }
+    }
+
+    function handleSubmitChangeRequest() {
+      if (!activeParticipant) return;
+      var field = document.getElementById('cr-field').value;
+      var newVal = document.getElementById('cr-new-value').value;
+      SaidRunStore.submitChangeRequest(activeParticipant.id, field, newVal);
+      renderParticipantDashboard();
+      SaidRunUI.showToast('Pengajuan perubahan ' + field + ' dikirim ke Admin.', 'success');
+    }
+
+    function renderChangeHistory(db, participantId) {
+      var list = db.changeRequests.filter(function (cr) { return cr.participantId === participantId; });
+      var pendingCount = list.filter(function (cr) { return cr.status === 'Menunggu Persetujuan'; }).length;
+      document.getElementById('cr-pending-badge').textContent = pendingCount + ' Pengajuan Menunggu Persetujuan';
+
+      var container = document.getElementById('cr-history-list');
+      if (list.length === 0) {
+        container.innerHTML = '<p class="font-body text-body-md text-light-on-surface-variant">Belum ada pengajuan perubahan data.</p>';
+        return;
+      }
+      container.innerHTML = list.map(function (cr) {
+        return '<div class="p-gutter-sm rounded bg-light-surface-container-low border border-light-outline-variant/50 flex flex-wrap items-center justify-between gap-2">' +
+          '<div class="flex flex-col">' +
+            '<span class="font-title text-title-md text-light-on-surface">' + SaidRunUI.escapeHtml(cr.field) + ': ' + SaidRunUI.escapeHtml(cr.oldValue) + ' → ' + SaidRunUI.escapeHtml(cr.newValue) + '</span>' +
+            '<span class="font-body text-body-md text-light-on-surface-variant">' + SaidRunUI.escapeHtml(cr.note) + '</span>' +
+          '</div>' +
+          SaidRunUI.renderStatusBadge(cr.status) +
+        '</div>';
+      }).join('');
+    }
+
+    function openPhotoGallery() {
+      if (!activeParticipant || activeParticipant.photoCount <= 0) {
+        SaidRunUI.showToast('Foto lomba untuk BIB ini belum tersedia.', 'info');
+        return;
+      }
+      document.getElementById('photo-modal-title').textContent = 'Galeri Foto BIB ' + activeParticipant.bib + ' (' + activeParticipant.photoCount + ' Foto)';
+      document.getElementById('photo-modal').classList.remove('hidden');
+    }
+
+    function downloadCertificate() {
+      if (!activeParticipant || activeParticipant.status !== 'Terverifikasi') {
+        SaidRunUI.showToast('E-Certificate hanya tersedia untuk peserta terverifikasi.', 'warning');
+        return;
+      }
+      var p = activeParticipant;
+      var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">' +
+        '<rect width="1000" height="700" fill="#F9F9FF"/>' +
+        '<rect x="24" y="24" width="952" height="652" rx="16" fill="#FFFFFF" stroke="#00543A" stroke-width="6"/>' +
+        '<text x="500" y="110" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#00543A">UIN RADEN MAS SAID SURAKARTA</text>' +
+        '<text x="500" y="165" text-anchor="middle" font-family="sans-serif" font-size="44" font-weight="700" fill="#111C2D">E-CERTIFICATE FINISHER</text>' +
+        '<text x="500" y="215" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#3F4943">SAID RUN 2026 • 20 SEPTEMBER 2026</text>' +
+        '<text x="500" y="305" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#3F4943">Diberikan kepada:</text>' +
+        '<text x="500" y="365" text-anchor="middle" font-family="sans-serif" font-size="40" font-weight="700" fill="#00543A">' + SaidRunUI.escapeHtml(p.fullName) + '</text>' +
+        '<text x="500" y="430" text-anchor="middle" font-family="monospace" font-size="22" fill="#111C2D">BIB: ' + SaidRunUI.escapeHtml(p.bib) + '  |  Kategori: ' + SaidRunStore.getCategoryLabel(p.category) + '</text>' +
+        '<text x="500" y="485" text-anchor="middle" font-family="monospace" font-size="24" font-weight="700" fill="#A73A00">Chip Time: ' + SaidRunUI.escapeHtml(p.chipTime || '00:28:14') + '</text>' +
+        '<text x="500" y="600" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#6F7A73">Pusat Pengembangan Bisnis UIN Raden Mas Said Surakarta</text>' +
+      '</svg>';
+
+      var blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'E-Certificate-SAIDRUN2026-' + (p.bib || p.id) + '.svg';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      SaidRunUI.showToast('E-Certificate berhasil diunduh!', 'success');
+    }
+
+    document.addEventListener('DOMContentLoaded', renderParticipantDashboard);
+    window.addEventListener('storage', function (e) {
+      if (e.key === SaidRunStore.STORAGE_KEY) renderParticipantDashboard();
+    });
   </script>
-
-
-
 </body></html>

@@ -150,6 +150,8 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
   <link href="https://fonts.googleapis.com/css2?family=Alata&amp;family=Instrument+Sans:wght@500;600;700&amp;family=Red+Hat+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
   <style>.material-symbols-outlined { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+  <script src="../shared/store.js"></script>
+  <script src="../shared/ui.js"></script>
 </head>
 <body class="bg-light-surface text-light-on-surface font-body antialiased min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
 
@@ -173,10 +175,10 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
       </nav>
 
       <div class="flex items-center gap-gutter-sm">
-        <a href="../dashboard-peserta/DashboardPeserta.html" data-component-id="button-secondary" data-component-type="button" data-component-variant="secondary" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-light-surface-container-lowest text-light-primary border border-light-outline-variant font-label text-label-lg hover:bg-light-surface-container-low transition-colors duration-state-change">
+        <button type="button" onclick="openLoginModal()" data-component-id="button-secondary" data-component-type="button" data-component-variant="secondary" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-light-surface-container-lowest text-light-primary border border-light-outline-variant font-label text-label-lg hover:bg-light-surface-container-low transition-colors duration-state-change">
           <span data-design-text-token="label-lg">Masuk Akun</span>
-        </a>
-        <a href="../pendaftaran-lomba/PendaftaranLomba.html" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center gap-2 px-5 py-2 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container transition-colors duration-state-change">
+        </button>
+        <a href="../formulir_pendaftaran_bertahap/code.html" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center gap-2 px-5 py-2 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container transition-colors duration-state-change">
           <span data-design-text-token="label-lg">Daftar Sekarang</span>
         </a>
       </div>
@@ -190,7 +192,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
         <div class="lg:col-span-6 flex flex-col gap-gutter-lg">
           <div class="inline-flex items-center gap-gutter-sm self-start px-3 py-1 rounded-full bg-warning-container text-on-warning-container">
             <span class="material-symbols-outlined" style="font-size: 16px;" aria-hidden="true">bolt</span>
-            <span class="font-label text-label-sm" data-design-text-token="label-sm">Early Bird Tersedia • Sisa 118 Kuota Promo</span>
+            <span id="live-earlybird-badge" class="font-label text-label-sm" data-design-text-token="label-sm">Early Bird Tersedia • Sisa 118 Kuota Promo</span>
           </div>
 
           <h1 class="font-display text-display-lg-mobile lg:text-display-lg text-light-on-surface text-balance" data-design-text-token="display-lg">
@@ -217,7 +219,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
           </div>
 
           <div class="flex flex-wrap items-center gap-gutter-md">
-            <a href="../pendaftaran-lomba/PendaftaranLomba.html" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container transition-colors duration-state-change">
+            <a href="../formulir_pendaftaran_bertahap/code.html" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container transition-colors duration-state-change">
               <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">directions_run</span>
               <span data-design-text-token="label-lg">Daftar Lomba Sekarang</span>
             </a>
@@ -235,7 +237,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                 <span class="material-symbols-outlined text-light-primary" style="font-size: 20px;" aria-hidden="true">verified</span>
                 <span class="font-body text-body-md text-light-on-surface" data-design-text-token="body-md">Terintegrasi Timing Chip &amp; E-Ticket QR</span>
               </div>
-              <span class="font-mono text-mono-md text-light-primary tabular-nums" data-design-text-token="mono-md">1.282 / 1.500 Terdaftar</span>
+              <span id="live-total-registered" class="font-mono text-mono-md text-light-primary tabular-nums" data-design-text-token="mono-md">1.282 / 1.500 Terdaftar</span>
             </div>
           </div>
         </div>
@@ -265,7 +267,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             <header class="flex items-start justify-between gap-gutter-md">
               <div>
                 <h3 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">5K Fun Run</h3>
-                <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Cut-off time 90 menit • Sisa 164 dari 1.000 kuota</p>
+                <p id="live-5k-quota" class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Cut-off time 90 menit • Sisa 164 dari 1.000 kuota</p>
               </div>
               <span class="px-3 py-1 rounded-full bg-warning-container text-on-warning-container font-label text-label-sm" data-design-text-token="label-sm">Early Bird Aktif</span>
             </header>
@@ -303,7 +305,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
 
           <footer class="pt-gutter-md border-t border-light-outline-variant/40 flex items-center justify-between gap-gutter-md">
             <span class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Flag-off 06.15 WIB</span>
-            <a href="../pendaftaran-lomba/PendaftaranLomba.html" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container transition-colors duration-state-change">
+            <a href="../formulir_pendaftaran_bertahap/code.html?category=5k" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container transition-colors duration-state-change">
               <span data-design-text-token="label-lg">Pilih Kategori 5K</span>
             </a>
           </footer>
@@ -315,7 +317,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             <header class="flex items-start justify-between gap-gutter-md">
               <div>
                 <h3 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">10K Competitive</h3>
-                <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Cut-off time 150 menit • Sisa 54 dari 500 kuota</p>
+                <p id="live-10k-quota" class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Cut-off time 150 menit • Sisa 54 dari 500 kuota</p>
               </div>
               <span class="px-3 py-1 rounded-full bg-success-container text-on-success-container font-label text-label-sm" data-design-text-token="label-sm">Podium Kategori</span>
             </header>
@@ -353,7 +355,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
 
           <footer class="pt-gutter-md border-t border-light-outline-variant/40 flex items-center justify-between gap-gutter-md">
             <span class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Flag-off 06.00 WIB</span>
-            <a href="../pendaftaran-lomba/PendaftaranLomba.html" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container transition-colors duration-state-change">
+            <a href="../formulir_pendaftaran_bertahap/code.html?category=10k" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container transition-colors duration-state-change">
               <span data-design-text-token="label-lg">Pilih Kategori 10K</span>
             </a>
           </footer>
@@ -409,9 +411,9 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             Setelah lomba selesai dan hasil timing chip dinyatakan final oleh panitia, peserta dapat langsung melihat catatan waktu, peringkat, status podium, galeri foto berdasarkan nomor BIB, serta mengunduh E-Certificate resmi dari dashboard akun.
           </p>
           <div class="pt-gutter-xs">
-            <a href="../dashboard-peserta/DashboardPeserta.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-light-surface-container-low text-light-primary border border-light-outline-variant font-label text-label-lg hover:bg-light-surface-container transition-colors duration-state-change">
+            <a href="../dashboard_peserta_e_ticket/code.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-light-surface-container-low text-light-primary border border-light-outline-variant font-label text-label-lg hover:bg-light-surface-container transition-colors duration-state-change">
               <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">emoji_events</span>
-              <span data-design-text-token="label-lg">Lihat Contoh Dashboard Peserta</span>
+              <span data-design-text-token="label-lg">Lihat Dashboard Peserta</span>
             </a>
           </div>
         </div>
@@ -451,11 +453,97 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
         <span class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Kontak Resmi: panitia@saidrun.uinsaid.ac.id • Narahubung: 0812-3456-7890</span>
       </div>
       <div class="flex items-center gap-gutter-md">
-        <a href="../dashboard-admin/DashboardAdmin.html" class="font-label text-label-sm text-light-on-surface-variant hover:text-light-primary">Portal Admin / Panitia</a>
+        <a href="../dashboard_peserta_e_ticket/code.html" class="font-label text-label-sm text-light-on-surface-variant hover:text-light-primary">Portal Peserta</a>
+        <span class="text-light-outline-variant">•</span>
+        <a href="../dashboard_admin_check_in_qr/code.html" class="font-label text-label-sm text-light-on-surface-variant hover:text-light-primary">Portal Admin / Panitia</a>
       </div>
     </div>
   </footer>
 
+  <!-- Modal Masuk Akun Peserta -->
+  <div id="login-modal" class="hidden fixed inset-0 z-50 bg-light-on-surface/40 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="login-modal-title">
+    <div class="bg-light-surface-container-lowest rounded-xl border border-light-outline-variant w-full max-w-md p-gutter-lg flex flex-col gap-gutter-md shadow-xl">
+      <div class="flex items-center justify-between border-b border-light-outline-variant/40 pb-gutter-sm">
+        <h2 id="login-modal-title" class="font-headline text-title-lg text-light-on-surface">Masuk Portal Peserta</h2>
+        <button type="button" onclick="closeLoginModal()" class="p-1 rounded hover:bg-light-surface-container-low text-light-on-surface-variant" aria-label="Tutup modal">
+          <span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+        </button>
+      </div>
 
+      <form onsubmit="handleLoginSubmit(event)" class="flex flex-col gap-gutter-sm">
+        <label class="flex flex-col gap-1">
+          <span class="font-label text-label-lg text-light-on-surface">Cari dengan Email, BIB, atau ID Transaksi</span>
+          <input id="login-query-input" type="text" placeholder="Contoh: 5K-0142 atau TRX-SR26-08914" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-mono text-mono-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary" required>
+        </label>
+        <p id="login-error-msg" class="hidden font-body text-body-md text-light-error"></p>
+        <button type="submit" class="w-full py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container transition-colors duration-state-change">
+          Buka Dashboard Peserta
+        </button>
+      </form>
 
+      <div class="pt-gutter-sm border-t border-light-outline-variant/40 flex flex-col gap-gutter-xs">
+        <span class="font-label text-label-sm text-light-on-surface-variant">Akun Terdaftar Cepat:</span>
+        <div id="quick-accounts-list" class="flex flex-col gap-1.5 max-h-40 overflow-y-auto"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function syncLandingQuotas() {
+      if (!window.SaidRunStore) return;
+      var stats = SaidRunStore.getStats();
+      var eb = document.getElementById('live-earlybird-badge');
+      var tot = document.getElementById('live-total-registered');
+      var q5 = document.getElementById('live-5k-quota');
+      var q10 = document.getElementById('live-10k-quota');
+
+      if (eb) eb.textContent = 'Early Bird Tersedia • Sisa ' + stats.earlyBirdRemaining + ' Kuota Promo';
+      if (tot) tot.textContent = stats.totalRegistered.toLocaleString('id-ID') + ' / ' + stats.totalQuota.toLocaleString('id-ID') + ' Terdaftar';
+      if (q5) q5.textContent = 'Cut-off time 90 menit • Sisa ' + stats.rem5k + ' dari 1.000 kuota';
+      if (q10) q10.textContent = 'Cut-off time 150 menit • Sisa ' + stats.rem10k + ' dari 500 kuota';
+    }
+
+    function openLoginModal() {
+      var modal = document.getElementById('login-modal');
+      var listEl = document.getElementById('quick-accounts-list');
+      var errEl = document.getElementById('login-error-msg');
+      errEl.classList.add('hidden');
+      var db = SaidRunStore.loadDB();
+      listEl.innerHTML = db.participants.slice(0, 5).map(function (p) {
+        var meta = (p.bib !== '—' ? 'BIB ' + p.bib : p.trxId) + ' • ' + p.status;
+        return '<button type="button" onclick="loginAsParticipant(\'' + p.id + '\')" class="w-full text-left px-3 py-2 rounded bg-light-surface-container-low hover:bg-light-surface-container flex items-center justify-between gap-2">' +
+          '<span class="font-body text-body-md text-light-on-surface">' + SaidRunUI.escapeHtml(p.fullName) + '</span>' +
+          '<span class="font-mono text-label-sm text-light-primary">' + SaidRunUI.escapeHtml(meta) + '</span>' +
+        '</button>';
+      }).join('');
+      modal.classList.remove('hidden');
+    }
+
+    function closeLoginModal() {
+      document.getElementById('login-modal').classList.add('hidden');
+    }
+
+    function loginAsParticipant(id) {
+      SaidRunStore.setActiveParticipant(id);
+      window.location.href = '../dashboard_peserta_e_ticket/code.html';
+    }
+
+    function handleLoginSubmit(e) {
+      e.preventDefault();
+      var q = document.getElementById('login-query-input').value;
+      var found = SaidRunStore.findParticipantByQuery(q);
+      var errEl = document.getElementById('login-error-msg');
+      if (!found) {
+        errEl.textContent = 'Peserta tidak ditemukan. Periksa kembali Email, BIB, atau ID Transaksi.';
+        errEl.classList.remove('hidden');
+        return;
+      }
+      loginAsParticipant(found.id);
+    }
+
+    document.addEventListener('DOMContentLoaded', syncLandingQuotas);
+    window.addEventListener('storage', function (e) {
+      if (e.key === SaidRunStore.STORAGE_KEY) syncLandingQuotas();
+    });
+  </script>
 </body></html>

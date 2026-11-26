@@ -51,41 +51,7 @@ globalThis.tailwind.config = {
         'light-outline-variant': '#BEC9C1',
         'light-inverse-surface': '#263143',
         'light-inverse-on-surface': '#ECF1FF',
-        'light-inverse-primary': '#83D7B0',
-        'dark-primary': '#83D7B0',
-        'dark-on-primary': '#003826',
-        'dark-primary-container': '#0D6E4E',
-        'dark-on-primary-container': '#98EDC5',
-        'dark-secondary': '#FFB599',
-        'dark-on-secondary': '#5A1C00',
-        'dark-secondary-container': '#F66018',
-        'dark-on-secondary-container': '#320C00',
-        'dark-tertiary': '#FFB3AF',
-        'dark-on-tertiary': '#5A1A1A',
-        'dark-tertiary-container': '#974946',
-        'dark-on-tertiary-container': '#FFD1CE',
-        'dark-error': '#FFB4AB',
-        'dark-on-error': '#690005',
-        'dark-error-container': '#93000A',
-        'dark-on-error-container': '#FFDAD6',
-        'dark-background': '#081425',
-        'dark-on-background': '#D8E3FB',
-        'dark-surface': '#081425',
-        'dark-surface-dim': '#081425',
-        'dark-surface-bright': '#2F3A4C',
-        'dark-surface-container-lowest': '#040E1F',
-        'dark-surface-container-low': '#111C2D',
-        'dark-surface-container': '#152031',
-        'dark-surface-container-high': '#1F2A3C',
-        'dark-surface-container-highest': '#2A3548',
-        'dark-on-surface': '#D8E3FB',
-        'dark-surface-variant': '#3F4943',
-        'dark-on-surface-variant': '#BEC9C1',
-        'dark-outline': '#88938C',
-        'dark-outline-variant': '#3F4943',
-        'dark-inverse-surface': '#D8E3FB',
-        'dark-inverse-on-surface': '#263143',
-        'dark-inverse-primary': '#086C4C',
+        'light-inverse-primary': '#83D7B0'
       },
       borderRadius: {
         'sm': '4px',
@@ -93,7 +59,7 @@ globalThis.tailwind.config = {
         'md': '12px',
         'lg': '16px',
         'xl': '24px',
-        'full': '9999px',
+        'full': '9999px'
       },
       spacing: {
         'gutter-xs': '4px',
@@ -102,7 +68,7 @@ globalThis.tailwind.config = {
         'gutter-lg': '24px',
         'gutter-xl': '32px',
         'section': '48px',
-        'page-margin': '24px',
+        'page-margin': '24px'
       },
       fontFamily: {
         'display': ['"Instrument Sans"', 'sans-serif'],
@@ -110,7 +76,7 @@ globalThis.tailwind.config = {
         'title': ['"Instrument Sans"', 'sans-serif'],
         'body': ['"Alata"', 'sans-serif'],
         'label': ['"Instrument Sans"', 'sans-serif'],
-        'mono': ['"Red Hat Mono"', 'monospace'],
+        'mono': ['"Red Hat Mono"', 'monospace']
       },
       fontSize: {
         'display-lg': ['48px', { lineHeight: '54px', letterSpacing: '-0.5px', fontWeight: '700' }],
@@ -125,85 +91,76 @@ globalThis.tailwind.config = {
         'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.1px', fontWeight: '600' }],
         'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '600' }],
         'mono-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
-        'mono-lg': ['20px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '600' }],
+        'mono-lg': ['20px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '600' }]
       },
       transitionDuration: {
         'state-change': '100ms',
         'surface-enter': '200ms',
-        'surface-exit': '150ms',
-      },
-      transitionDelay: {
-        'state-change': '0ms',
-        'surface-enter': '0ms',
-        'surface-exit': '0ms',
-      },
-      transitionTimingFunction: {
-        'state-change': 'ease-out',
-        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
-        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
-      },
-    },
-  },
+        'surface-exit': '150ms'
+      }
+    }
+  }
 };
-if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
 </script>
   <link href="https://fonts.googleapis.com/css2?family=Alata&amp;family=Instrument+Sans:wght@500;600;700&amp;family=Red+Hat+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
   <style>.material-symbols-outlined { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+  <script src="../shared/store.js"></script>
+  <script src="../shared/ui.js"></script>
 </head>
-<body class="bg-light-surface text-light-on-surface font-body antialiased min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
+<body class="bg-light-surface text-light-on-surface font-body antialiased min-h-screen flex flex-col">
 
   <!-- Task Flow Header -->
   <header class="bg-light-surface-container-lowest border-b border-light-outline-variant/60">
     <div class="max-w-5xl mx-auto px-gutter-lg h-16 flex items-center justify-between gap-gutter-md">
-      <a href="../halaman-utama/HalamanUtama.html" class="inline-flex items-center gap-gutter-sm font-label text-label-lg text-light-on-surface-variant hover:text-light-primary transition-colors duration-state-change">
+      <a href="../halaman_utama_info_event/code.html" class="inline-flex items-center gap-gutter-sm font-label text-label-lg text-light-on-surface-variant hover:text-light-primary transition-colors duration-state-change">
         <span class="material-symbols-outlined" style="font-size: 20px;" aria-hidden="true">arrow_back</span>
-        <span data-design-text-token="label-lg">Kembali ke Informasi Event</span>
+        <span>Kembali ke Informasi Event</span>
       </a>
       <div class="flex items-center gap-gutter-sm">
         <span class="w-7 h-7 rounded bg-light-primary text-light-on-primary flex items-center justify-center font-label text-label-sm">SR</span>
-        <span class="font-headline text-title-md text-light-on-surface" data-design-text-token="title-md">Pendaftaran SAID RUN 2026</span>
+        <span class="font-headline text-title-md text-light-on-surface">Pendaftaran SAID RUN 2026</span>
       </div>
     </div>
   </header>
 
   <main class="flex-1 max-w-5xl w-full mx-auto px-gutter-lg py-gutter-xl flex flex-col gap-gutter-xl">
-    <!-- 4-Step Progress Stepper (KNF-05) -->
+    <!-- 4-Step Progress Stepper -->
     <nav aria-label="Tahapan pendaftaran" class="bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-md">
       <ol class="grid grid-cols-2 md:grid-cols-4 gap-gutter-md">
         <li>
-          <button type="button" onclick="goToStep(1)" id="step-btn-1" class="w-full text-left flex items-center gap-gutter-sm p-gutter-sm rounded bg-light-surface-container-low border border-light-primary">
-            <span class="w-7 h-7 rounded-full bg-light-primary text-light-on-primary flex items-center justify-center font-mono text-mono-md">1</span>
+          <button type="button" onclick="tryGoToStep(1)" id="step-btn-1" class="w-full text-left flex items-center gap-gutter-sm p-gutter-sm rounded bg-light-surface-container-low border border-light-primary transition-colors duration-state-change">
+            <span id="step-num-1" class="w-7 h-7 rounded-full bg-light-primary text-light-on-primary flex items-center justify-center font-mono text-mono-md">1</span>
             <div class="flex flex-col">
-              <span class="font-label text-label-sm text-light-primary" data-design-text-token="label-sm">Tahap 1</span>
-              <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Kategori &amp; Profil</span>
+              <span class="font-label text-label-sm text-light-primary">Tahap 1</span>
+              <span class="font-title text-title-md text-light-on-surface">Kategori &amp; Profil</span>
             </div>
           </button>
         </li>
         <li>
-          <button type="button" onclick="goToStep(2)" id="step-btn-2" class="w-full text-left flex items-center gap-gutter-sm p-gutter-sm rounded border border-transparent hover:bg-light-surface-container-low">
-            <span class="w-7 h-7 rounded-full bg-light-surface-container text-light-on-surface-variant flex items-center justify-center font-mono text-mono-md">2</span>
+          <button type="button" onclick="tryGoToStep(2)" id="step-btn-2" class="w-full text-left flex items-center gap-gutter-sm p-gutter-sm rounded border border-transparent hover:bg-light-surface-container-low transition-colors duration-state-change">
+            <span id="step-num-2" class="w-7 h-7 rounded-full bg-light-surface-container text-light-on-surface-variant flex items-center justify-center font-mono text-mono-md">2</span>
             <div class="flex flex-col">
-              <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Tahap 2</span>
-              <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Kontak Darurat</span>
+              <span class="font-label text-label-sm text-light-on-surface-variant">Tahap 2</span>
+              <span class="font-title text-title-md text-light-on-surface">Kontak Darurat</span>
             </div>
           </button>
         </li>
         <li>
-          <button type="button" onclick="goToStep(3)" id="step-btn-3" class="w-full text-left flex items-center gap-gutter-sm p-gutter-sm rounded border border-transparent hover:bg-light-surface-container-low">
-            <span class="w-7 h-7 rounded-full bg-light-surface-container text-light-on-surface-variant flex items-center justify-center font-mono text-mono-md">3</span>
+          <button type="button" onclick="tryGoToStep(3)" id="step-btn-3" class="w-full text-left flex items-center gap-gutter-sm p-gutter-sm rounded border border-transparent hover:bg-light-surface-container-low transition-colors duration-state-change">
+            <span id="step-num-3" class="w-7 h-7 rounded-full bg-light-surface-container text-light-on-surface-variant flex items-center justify-center font-mono text-mono-md">3</span>
             <div class="flex flex-col">
-              <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Tahap 3</span>
-              <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Promo &amp; Waiver</span>
+              <span class="font-label text-label-sm text-light-on-surface-variant">Tahap 3</span>
+              <span class="font-title text-title-md text-light-on-surface">Promo &amp; Waiver</span>
             </div>
           </button>
         </li>
         <li>
-          <button type="button" onclick="goToStep(4)" id="step-btn-4" class="w-full text-left flex items-center gap-gutter-sm p-gutter-sm rounded border border-transparent hover:bg-light-surface-container-low">
-            <span class="w-7 h-7 rounded-full bg-light-surface-container text-light-on-surface-variant flex items-center justify-center font-mono text-mono-md">4</span>
+          <button type="button" onclick="tryGoToStep(4)" id="step-btn-4" class="w-full text-left flex items-center gap-gutter-sm p-gutter-sm rounded border border-transparent hover:bg-light-surface-container-low transition-colors duration-state-change">
+            <span id="step-num-4" class="w-7 h-7 rounded-full bg-light-surface-container text-light-on-surface-variant flex items-center justify-center font-mono text-mono-md">4</span>
             <div class="flex flex-col">
-              <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Tahap 4</span>
-              <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Pembayaran QRIS</span>
+              <span class="font-label text-label-sm text-light-on-surface-variant">Tahap 4</span>
+              <span class="font-title text-title-md text-light-on-surface">Pembayaran QRIS</span>
             </div>
           </button>
         </li>
@@ -216,50 +173,52 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
 
         <!-- STEP 1: Kategori & Profil -->
         <section id="step-panel-1" class="bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-lg">
-          <div class="flex items-center justify-between gap-gutter-md border-b border-light-outline-variant/40 pb-gutter-md">
+          <div class="flex flex-wrap items-center justify-between gap-gutter-md border-b border-light-outline-variant/40 pb-gutter-md">
             <div>
-              <h1 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">1. Kategori Lomba &amp; Profil Peserta</h1>
-              <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Data profil akun terisi otomatis dan dapat dipakai ulang di event berikutnya.</p>
+              <h1 class="font-headline text-headline-md text-light-on-surface">1. Kategori Lomba &amp; Profil Peserta</h1>
+              <p class="font-body text-body-md text-light-on-surface-variant">Lengkapi data diri untuk penerbitan BIB dan E-Ticket resmi.</p>
             </div>
-            <span class="px-3 py-1 rounded-full bg-success-container text-on-success-container font-label text-label-sm" data-design-text-token="label-sm">Akun Aktif</span>
+            <button type="button" onclick="fillDemoParticipant()" class="px-3 py-1.5 rounded-full bg-light-surface-container-low text-light-primary border border-light-outline-variant font-label text-label-sm hover:bg-light-surface-container">
+              Isi Data Contoh Baru
+            </button>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-md">
             <label class="flex flex-col gap-1.5">
-              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Kategori Lomba</span>
-              <select class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
-                <option value="5k" selected>5K Fun Run (Sisa 164 kuota)</option>
-                <option value="10k">10K Competitive (Sisa 54 kuota)</option>
+              <span class="font-label text-label-lg text-light-on-surface">Kategori Lomba *</span>
+              <select id="f-category" onchange="onPricingChange()" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+                <option value="5k">5K Fun Run</option>
+                <option value="10k">10K Competitive</option>
               </select>
             </label>
 
             <label class="flex flex-col gap-1.5">
-              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Kategori Peserta</span>
-              <select class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
-                <option value="civitas" selected>Civitas UIN RMS (Wajib NIM/NIK)</option>
-                <option value="alumni">Alumni (Wajib Bukti Kelulusan)</option>
-                <option value="umum">Umum</option>
+              <span class="font-label text-label-lg text-light-on-surface">Kategori Peserta *</span>
+              <select id="f-participant-type" onchange="onTypeChange(); onPricingChange();" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+                <option value="civitas">Civitas UIN RMS (Wajib NIM/NIP)</option>
+                <option value="alumni">Alumni (Wajib NIM/No. Ijazah)</option>
+                <option value="umum">Umum (Wajib NIK KTP)</option>
               </select>
             </label>
 
-            <label data-component-id="input-field-text" data-component-type="input-field" data-component-variant="text" class="flex flex-col gap-1.5">
-              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Nama Lengkap</span>
-              <input type="text" value="Luthfiya Zuhura" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
-            </label>
-
-            <label data-component-id="input-field-text" data-component-type="input-field" data-component-variant="text" class="flex flex-col gap-1.5">
-              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Nama pada BIB</span>
-              <input type="text" value="LUTHFIYA Z." class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+            <label class="flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface">Nama Lengkap *</span>
+              <input id="f-fullname" type="text" placeholder="Nama sesuai identitas" oninput="syncBibSuggestion()" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
             </label>
 
             <label class="flex flex-col gap-1.5">
-              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">NIM / NIK Civitas</span>
-              <input type="text" value="247411008" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-mono text-mono-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+              <span class="font-label text-label-lg text-light-on-surface">Nama pada BIB *</span>
+              <input id="f-bibname" type="text" maxlength="14" placeholder="Maks. 14 karakter" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface uppercase focus:border-light-primary focus:ring-1 focus:ring-light-primary">
             </label>
 
             <label class="flex flex-col gap-1.5">
-              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Ukuran Jersey</span>
-              <select class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+              <span id="label-nim-nik" class="font-label text-label-lg text-light-on-surface">NIM / NIP Civitas *</span>
+              <input id="f-nimnik" type="text" placeholder="Masukkan nomor identitas" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-mono text-mono-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+            </label>
+
+            <label class="flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface">Ukuran Jersey *</span>
+              <select id="f-jersey" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
                 <option value="S">S (Lebar 48 cm)</option>
                 <option value="M" selected>M (Lebar 50 cm)</option>
                 <option value="L">L (Lebar 52 cm)</option>
@@ -268,19 +227,24 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             </label>
 
             <label class="flex flex-col gap-1.5">
-              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Nomor HP (WhatsApp)</span>
-              <input type="tel" value="081298765432" inputmode="numeric" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-mono text-mono-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+              <span class="font-label text-label-lg text-light-on-surface">Email Aktif (Untuk E-Ticket) *</span>
+              <input id="f-email" type="email" placeholder="nama@uinsaid.ac.id" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
             </label>
 
             <label class="flex flex-col gap-1.5">
-              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Asal Komunitas (Opsional)</span>
-              <input type="text" value="Sains Data Runners" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+              <span class="font-label text-label-lg text-light-on-surface">Nomor HP (WhatsApp) *</span>
+              <input id="f-phone" type="tel" inputmode="numeric" placeholder="08xxxxxxxxxx" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-mono text-mono-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+            </label>
+
+            <label class="md:col-span-2 flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface">Asal Komunitas (Opsional)</span>
+              <input id="f-community" type="text" placeholder="Contoh: Sains Data Runners" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
             </label>
           </div>
 
           <div class="pt-gutter-md border-t border-light-outline-variant/40 flex justify-end">
-            <button type="button" onclick="goToStep(2)" class="inline-flex items-center gap-2 px-6 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container transition-colors duration-state-change">
-              <span data-design-text-token="label-lg">Lanjut ke Kontak Darurat</span>
+            <button type="button" onclick="tryGoToStep(2)" class="inline-flex items-center gap-2 px-6 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container transition-colors duration-state-change">
+              <span>Lanjut ke Kontak Darurat</span>
               <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">arrow_forward</span>
             </button>
           </div>
@@ -289,29 +253,29 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
         <!-- STEP 2: Kontak Darurat & Kesehatan -->
         <section id="step-panel-2" class="hidden bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-lg">
           <div class="border-b border-light-outline-variant/40 pb-gutter-md">
-            <h2 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">2. Kontak Darurat &amp; Data Kesehatan</h2>
-            <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Sesuai UU PDP No. 27/2022, data kesehatan hanya diakses petugas medis berwenang saat darurat.</p>
+            <h2 class="font-headline text-headline-md text-light-on-surface">2. Kontak Darurat &amp; Data Kesehatan</h2>
+            <p class="font-body text-body-md text-light-on-surface-variant">Sesuai UU PDP No. 27/2022, data kesehatan hanya diakses petugas medis berwenang saat darurat.</p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-md">
             <label class="flex flex-col gap-1.5">
-              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Nama Kontak Darurat</span>
-              <input type="text" value="Ahmad Fuadi" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+              <span class="font-label text-label-lg text-light-on-surface">Nama Kontak Darurat *</span>
+              <input id="f-emergency-name" type="text" placeholder="Nama keluarga/kerabat" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
             </label>
 
             <label class="flex flex-col gap-1.5">
-              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Hubungan</span>
-              <input type="text" value="Orang Tua" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+              <span class="font-label text-label-lg text-light-on-surface">Hubungan *</span>
+              <input id="f-emergency-rel" type="text" placeholder="Orang Tua / Pasangan / Kerabat" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
             </label>
 
             <label class="flex flex-col gap-1.5">
-              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Nomor Kontak Darurat</span>
-              <input type="tel" value="081345678901" inputmode="numeric" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-mono text-mono-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+              <span class="font-label text-label-lg text-light-on-surface">Nomor Kontak Darurat *</span>
+              <input id="f-emergency-phone" type="tel" inputmode="numeric" placeholder="08xxxxxxxxxx" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-mono text-mono-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
             </label>
 
             <label class="flex flex-col gap-1.5">
-              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Golongan Darah</span>
-              <select class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+              <span class="font-label text-label-lg text-light-on-surface">Golongan Darah</span>
+              <select id="f-blood" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
                 <option value="A">A</option>
                 <option value="B">B</option>
                 <option value="AB">AB</option>
@@ -320,17 +284,17 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             </label>
 
             <label class="md:col-span-2 flex flex-col gap-1.5">
-              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Riwayat Penyakit / Alergi / Obat Tertentu</span>
-              <textarea rows="3" placeholder="Tuliskan jika ada, atau isi &#39;Tidak ada&#39;" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">Tidak ada riwayat penyakit atau alergi obat.</textarea>
+              <span class="font-label text-label-lg text-light-on-surface">Riwayat Penyakit / Alergi / Obat Tertentu</span>
+              <textarea id="f-medical" rows="3" placeholder="Tuliskan jika ada, atau isi 'Tidak ada'" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">Tidak ada riwayat penyakit atau alergi obat.</textarea>
             </label>
           </div>
 
           <div class="pt-gutter-md border-t border-light-outline-variant/40 flex items-center justify-between">
             <button type="button" onclick="goToStep(1)" class="px-5 py-2.5 rounded bg-light-surface-container-lowest text-light-primary border border-light-outline-variant font-label text-label-lg hover:bg-light-surface-container-low">
-              <span data-design-text-token="label-lg">Kembali</span>
+              <span>Kembali</span>
             </button>
-            <button type="button" onclick="goToStep(3)" class="inline-flex items-center gap-2 px-6 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
-              <span data-design-text-token="label-lg">Lanjut ke Promo &amp; Waiver</span>
+            <button type="button" onclick="tryGoToStep(3)" class="inline-flex items-center gap-2 px-6 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
+              <span>Lanjut ke Promo &amp; Waiver</span>
               <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">arrow_forward</span>
             </button>
           </div>
@@ -339,47 +303,48 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
         <!-- STEP 3: Promo, Asuransi & Waiver -->
         <section id="step-panel-3" class="hidden bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-lg">
           <div class="border-b border-light-outline-variant/40 pb-gutter-md">
-            <h2 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">3. Kode Promo, Asuransi &amp; Persetujuan Waiver</h2>
-            <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Waiver wajib disetujui sebelum tagihan pembayaran diterbitkan dan kuota ditahan.</p>
+            <h2 class="font-headline text-headline-md text-light-on-surface">3. Kode Promo, Asuransi &amp; Persetujuan Waiver</h2>
+            <p class="font-body text-body-md text-light-on-surface-variant">Waiver wajib disetujui sebelum tagihan pembayaran diterbitkan dan kuota ditahan.</p>
           </div>
 
           <div class="flex flex-col gap-gutter-md">
             <div class="flex flex-col sm:flex-row gap-gutter-sm items-end">
-              <label class="flex-1 flex flex-col gap-1.5">
-                <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Kode Promo (Opsional)</span>
-                <input type="text" value="SAIDHEMAT10" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-mono text-mono-md text-light-on-surface">
+              <label class="flex-1 flex flex-col gap-1.5 w-full">
+                <span class="font-label text-label-lg text-light-on-surface">Kode Promo (Opsional — coba: SAIDHEMAT10 / UINRMS20)</span>
+                <input id="f-promo" type="text" value="SAIDHEMAT10" placeholder="Masukkan kode promo" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-mono text-mono-md text-light-on-surface uppercase">
               </label>
-              <button type="button" class="px-5 py-2.5 rounded bg-light-surface-container-low text-light-primary border border-light-outline-variant font-label text-label-lg hover:bg-light-surface-container">
-                <span data-design-text-token="label-lg">Terapkan Kode</span>
+              <button type="button" onclick="applyPromoCode()" class="px-5 py-2.5 rounded bg-light-surface-container-low text-light-primary border border-light-outline-variant font-label text-label-lg hover:bg-light-surface-container shrink-0">
+                <span>Terapkan Kode</span>
               </button>
             </div>
+            <p id="promo-feedback" class="font-body text-body-md text-light-primary hidden"></p>
 
             <label class="flex items-start gap-gutter-md p-gutter-md rounded border border-light-outline-variant bg-light-surface-container-low cursor-pointer">
-              <input type="checkbox" checked class="mt-1 rounded border-light-outline text-light-primary focus:ring-light-primary">
+              <input id="f-insurance" type="checkbox" checked onchange="onPricingChange()" class="mt-1 rounded border-light-outline text-light-primary focus:ring-light-primary">
               <div class="flex-1 flex items-center justify-between gap-gutter-md">
                 <div>
-                  <p class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Tambahkan Asuransi Perlindungan Lomba</p>
-                  <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Perlindungan kecelakaan diri selama pelaksanaan SAID RUN 2026 (e-polis dikirim via email).</p>
+                  <p class="font-title text-title-md text-light-on-surface">Tambahkan Asuransi Perlindungan Lomba</p>
+                  <p class="font-body text-body-md text-light-on-surface-variant">Perlindungan kecelakaan diri selama pelaksanaan SAID RUN 2026 (e-polis dikirim via email).</p>
                 </div>
-                <span class="font-mono text-mono-md text-light-primary tabular-nums" data-design-text-token="mono-md">+Rp 15.000</span>
+                <span class="font-mono text-mono-md text-light-primary tabular-nums shrink-0">+Rp 15.000</span>
               </div>
             </label>
 
             <div class="p-gutter-md rounded border border-light-outline-variant/80 bg-light-surface-container-lowest flex flex-col gap-gutter-sm">
-              <h3 class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Pernyataan Persetujuan (Waiver) — Wajib</h3>
+              <h3 class="font-title text-title-md text-light-on-surface">Pernyataan Persetujuan (Waiver) — Wajib</h3>
               <label class="flex items-start gap-gutter-sm cursor-pointer">
-                <input type="checkbox" checked class="mt-1 rounded border-light-outline text-light-primary focus:ring-light-primary">
-                <span class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Saya menyetujui syarat &amp; ketentuan lomba, pernyataan risiko kesehatan (disclaimer), serta izin penggunaan dokumentasi foto/video oleh panitia SAID RUN.</span>
+                <input id="f-waiver" type="checkbox" class="mt-1 rounded border-light-outline text-light-primary focus:ring-light-primary">
+                <span class="font-body text-body-md text-light-on-surface-variant">Saya menyetujui syarat &amp; ketentuan lomba, pernyataan risiko kesehatan (disclaimer), serta izin penggunaan dokumentasi foto/video oleh panitia SAID RUN.</span>
               </label>
             </div>
           </div>
 
           <div class="pt-gutter-md border-t border-light-outline-variant/40 flex items-center justify-between">
             <button type="button" onclick="goToStep(2)" class="px-5 py-2.5 rounded bg-light-surface-container-lowest text-light-primary border border-light-outline-variant font-label text-label-lg hover:bg-light-surface-container-low">
-              <span data-design-text-token="label-lg">Kembali</span>
+              <span>Kembali</span>
             </button>
-            <button type="button" onclick="goToStep(4)" class="inline-flex items-center gap-2 px-6 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
-              <span data-design-text-token="label-lg">Buat Tagihan QRIS</span>
+            <button type="button" onclick="createQrisInvoice()" class="inline-flex items-center gap-2 px-6 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
+              <span>Buat Tagihan QRIS</span>
               <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">qr_code_2</span>
             </button>
           </div>
@@ -387,29 +352,63 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
 
         <!-- STEP 4: Pembayaran QRIS -->
         <section id="step-panel-4" class="hidden bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-lg">
-          <div class="flex items-center justify-between gap-gutter-md border-b border-light-outline-variant/40 pb-gutter-md">
+          <div class="flex flex-wrap items-center justify-between gap-gutter-md border-b border-light-outline-variant/40 pb-gutter-md">
             <div>
-              <h2 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">4. Pembayaran QRIS &amp; Verifikasi Otomatis</h2>
-              <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Status saat ini: Menunggu Pembayaran. Kuota Anda ditahan hingga batas waktu berakhir.</p>
+              <h2 class="font-headline text-headline-md text-light-on-surface">4. Pembayaran QRIS &amp; Verifikasi Otomatis</h2>
+              <p id="qris-status-desc" class="font-body text-body-md text-light-on-surface-variant">Status saat ini: Menunggu Pembayaran. Kuota Anda ditahan hingga batas waktu berakhir.</p>
             </div>
-            <span class="px-3 py-1 rounded-full bg-warning-container text-on-warning-container font-mono text-mono-md tabular-nums" data-design-text-token="mono-md">23:54:12</span>
+            <span id="qris-countdown" class="px-3 py-1 rounded-full bg-warning-container text-on-warning-container font-mono text-mono-md tabular-nums">23:59:59</span>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg items-center">
             <div class="bg-light-surface-container-low rounded-lg p-gutter-lg flex flex-col items-center gap-gutter-md border border-light-outline-variant/60">
-              <div class="w-44 h-44 bg-light-surface-container-lowest rounded border border-light-outline-variant flex items-center justify-center">
-                <span class="material-symbols-outlined text-light-on-surface" style="font-size: 120px;" aria-hidden="true">qr_code_2</span>
-              </div>
-              <span class="font-mono text-mono-md text-light-on-surface tabular-nums" data-design-text-token="mono-md">ID: TRX-SR26-08914</span>
+              <div id="qris-svg-box" class="p-3 bg-white rounded border border-light-outline-variant flex items-center justify-center"></div>
+              <span id="qris-trx-id" class="font-mono text-mono-md text-light-on-surface tabular-nums">ID: TRX-SR26-08915</span>
+              <span id="qris-amount-badge" class="font-mono text-mono-lg text-light-primary tabular-nums">Rp 115.000</span>
             </div>
 
             <div class="flex flex-col gap-gutter-md">
-              <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">
-                Pindai kode QRIS menggunakan aplikasi e-wallet atau mobile banking Anda. Setelah pembayaran berhasil, sistem akan memverifikasi otomatis dan mengirimkan E-Ticket ke email Anda.
-              </p>
-              <a href="../dashboard-peserta/DashboardPeserta.html" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
-                <span data-design-text-token="label-lg">Cek Status di Dashboard Peserta</span>
-              </a>
+              <div id="qris-pending-actions" class="flex flex-col gap-gutter-sm">
+                <p class="font-body text-body-md text-light-on-surface-variant">
+                  Pindai kode QRIS menggunakan e-wallet atau mobile banking. Untuk pengujian sistem, gunakan tombol simulasi pembayaran di bawah:
+                </p>
+                <button type="button" onclick="simulatePayment('auto')" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container transition-colors duration-state-change">
+                  <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">check_circle</span>
+                  <span>Simulasikan Bayar QRIS Berhasil</span>
+                </button>
+                <button type="button" onclick="simulatePayment('manual_issue')" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-warning-container text-on-warning-container font-label text-label-lg hover:opacity-90 transition-opacity">
+                  <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">warning</span>
+                  <span>Simulasikan Nominal Tidak Cocok</span>
+                </button>
+              </div>
+
+              <div id="qris-verified-box" class="hidden p-gutter-md rounded-lg bg-success-container/60 border border-success flex flex-col gap-gutter-sm">
+                <div class="flex items-center gap-2 text-on-success-container">
+                  <span class="material-symbols-outlined" style="font-size: 22px;" aria-hidden="true">verified</span>
+                  <span class="font-title text-title-md">Pembayaran Terverifikasi!</span>
+                </div>
+                <p id="qris-bib-issued" class="font-body text-body-md text-on-success-container"></p>
+                <a href="../dashboard_peserta_e_ticket/code.html" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
+                  <span>Buka E-Ticket di Dashboard Peserta</span>
+                  <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">arrow_forward</span>
+                </a>
+              </div>
+
+              <div id="qris-issue-box" class="hidden p-gutter-md rounded-lg bg-warning-container border border-warning flex flex-col gap-gutter-sm">
+                <div class="flex items-center gap-2 text-on-warning-container">
+                  <span class="material-symbols-outlined" style="font-size: 22px;" aria-hidden="true">pending_actions</span>
+                  <span class="font-title text-title-md">Transaksi Perlu Pemeriksaan Admin</span>
+                </div>
+                <p class="font-body text-body-md text-on-warning-container">Nominal transfer berbeda dengan tagihan. Admin/Panitia dapat memverifikasi transaksi ini di Dashboard Admin.</p>
+                <div class="flex flex-wrap gap-2">
+                  <a href="../dashboard_admin_check_in_qr/code.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded bg-warning text-on-warning font-label text-label-lg">
+                    <span>Cek di Dashboard Admin</span>
+                  </a>
+                  <a href="../dashboard_peserta_e_ticket/code.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded bg-light-surface-container-lowest text-light-on-surface border border-light-outline-variant font-label text-label-lg">
+                    <span>Dashboard Peserta</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -417,57 +416,352 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
       </div>
 
       <!-- Sticky Order Summary -->
-      <aside class="lg:col-span-4 bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-md">
-        <h2 class="font-title text-title-lg text-light-on-surface border-b border-light-outline-variant/40 pb-gutter-sm" data-design-text-token="title-lg">
+      <aside class="lg:col-span-4 lg:sticky lg:top-6 bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-md">
+        <h2 class="font-title text-title-lg text-light-on-surface border-b border-light-outline-variant/40 pb-gutter-sm">
           Ringkasan Biaya
         </h2>
 
         <div class="flex flex-col gap-gutter-sm font-body text-body-md">
-          <div class="flex items-center justify-between">
-            <span class="text-light-on-surface-variant">5K Fun Run (Civitas)</span>
-            <span class="font-mono text-mono-md text-light-on-surface tabular-nums">Rp 110.000</span>
+          <div class="flex items-center justify-between gap-2">
+            <span id="sum-cat-label" class="text-light-on-surface-variant">5K Fun Run (Civitas)</span>
+            <span id="sum-base-price" class="font-mono text-mono-md text-light-on-surface tabular-nums">Rp 110.000</span>
           </div>
-          <div class="flex items-center justify-between">
+          <div id="sum-ins-row" class="flex items-center justify-between gap-2">
             <span class="text-light-on-surface-variant">Asuransi Lomba</span>
             <span class="font-mono text-mono-md text-light-on-surface tabular-nums">Rp 15.000</span>
           </div>
-          <div class="flex items-center justify-between text-light-primary">
-            <span>Promo SAIDHEMAT10</span>
-            <span class="font-mono text-mono-md tabular-nums">-Rp 10.000</span>
+          <div id="sum-promo-row" class="flex items-center justify-between gap-2 text-light-primary">
+            <span id="sum-promo-label">Promo SAIDHEMAT10</span>
+            <span id="sum-promo-amount" class="font-mono text-mono-md tabular-nums">-Rp 10.000</span>
           </div>
         </div>
 
         <div class="pt-gutter-md border-t border-light-outline-variant/60 flex items-center justify-between">
-          <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Total Tagihan</span>
-          <span class="font-mono text-mono-lg text-light-primary tabular-nums" data-design-text-token="mono-lg">Rp 115.000</span>
+          <span class="font-title text-title-md text-light-on-surface">Total Tagihan</span>
+          <span id="sum-total-price" class="font-mono text-mono-lg text-light-primary tabular-nums">Rp 115.000</span>
         </div>
 
         <div class="p-gutter-sm rounded bg-light-surface-container-low flex items-start gap-gutter-sm">
           <span class="material-symbols-outlined text-light-primary" style="font-size: 18px;" aria-hidden="true">lock</span>
-          <span class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Kuota dikunci aman selama transaksi berlangsung agar tidak terlampaui.</span>
+          <span class="font-body text-body-md text-light-on-surface-variant">Kuota dikunci aman selama transaksi berlangsung agar tidak terlampaui.</span>
         </div>
       </aside>
     </div>
   </main>
 
   <script>
+    var currentStep = 1;
+    var appliedPromo = { code: 'SAIDHEMAT10', discount: 10000, label: 'Promo SAIDHEMAT10' };
+    var activeTrxParticipantId = null;
+    var countdownTimer = null;
+
+    function initForm() {
+      var db = SaidRunStore.loadDB();
+      var stats = SaidRunStore.getStats(db);
+
+      var catSelect = document.getElementById('f-category');
+      catSelect.options[0].text = '5K Fun Run (Sisa ' + stats.rem5k + ' kuota)';
+      catSelect.options[1].text = '10K Competitive (Sisa ' + stats.rem10k + ' kuota)';
+
+      var params = new URLSearchParams(window.location.search);
+      var catParam = params.get('category');
+      if (catParam === '10k' || catParam === '5k') {
+        catSelect.value = catParam;
+      }
+
+      fillDemoParticipant(true);
+      onTypeChange();
+      onPricingChange();
+    }
+
+    function fillDemoParticipant(silent) {
+      var samples = [
+        {
+          fullName: 'Nadia Kusuma Wardani',
+          bibName: 'NADIA K.',
+          nimNik: '247411039',
+          email: 'nadia.kusuma@uinsaid.ac.id',
+          phone: '081223344556',
+          community: 'UIN RMS Runners',
+          emergencyName: 'Hendra Kusuma',
+          emergencyRel: 'Ayah',
+          emergencyPhone: '081334455667'
+        },
+        {
+          fullName: 'Bagus Pratama Putra',
+          bibName: 'BAGUS P.',
+          nimNik: '236110091',
+          email: 'bagus.pratama@uinsaid.ac.id',
+          phone: '085678901234',
+          community: 'Surakarta Pace Club',
+          emergencyName: 'Ratna Sari',
+          emergencyRel: 'Ibu',
+          emergencyPhone: '085678901235'
+        }
+      ];
+      var pick = samples[Math.floor(Math.random() * samples.length)];
+      document.getElementById('f-fullname').value = pick.fullName;
+      document.getElementById('f-bibname').value = pick.bibName;
+      document.getElementById('f-nimnik').value = pick.nimNik;
+      document.getElementById('f-email').value = pick.email;
+      document.getElementById('f-phone').value = pick.phone;
+      document.getElementById('f-community').value = pick.community;
+      document.getElementById('f-emergency-name').value = pick.emergencyName;
+      document.getElementById('f-emergency-rel').value = pick.emergencyRel;
+      document.getElementById('f-emergency-phone').value = pick.emergencyPhone;
+      if (!silent) {
+        SaidRunUI.showToast('Data contoh peserta baru telah diisikan.', 'info');
+      }
+    }
+
+    function syncBibSuggestion() {
+      var name = document.getElementById('f-fullname').value.trim();
+      var bibInput = document.getElementById('f-bibname');
+      if (name && !bibInput.dataset.touched) {
+        bibInput.value = name.toUpperCase().slice(0, 14);
+      }
+    }
+
+    function onTypeChange() {
+      var type = document.getElementById('f-participant-type').value;
+      var label = document.getElementById('label-nim-nik');
+      if (type === 'civitas') label.textContent = 'NIM / NIP Civitas *';
+      else if (type === 'alumni') label.textContent = 'NIM / Nomor Ijazah Alumni *';
+      else label.textContent = 'NIK (Sesuai KTP) *';
+    }
+
+    function getPricingBreakdown() {
+      var db = SaidRunStore.loadDB();
+      var cat = document.getElementById('f-category').value;
+      var pType = document.getElementById('f-participant-type').value;
+      var ins = document.getElementById('f-insurance').checked;
+
+      var basePrice = db.event.categories[cat].prices[pType];
+      var insurancePrice = ins ? 15000 : 0;
+      var discount = appliedPromo ? appliedPromo.discount : 0;
+      var total = Math.max(0, basePrice + insurancePrice - discount);
+
+      return {
+        category: cat,
+        participantType: pType,
+        basePrice: basePrice,
+        insurance: ins,
+        insurancePrice: insurancePrice,
+        discount: discount,
+        total: total
+      };
+    }
+
+    function onPricingChange() {
+      var p = getPricingBreakdown();
+      document.getElementById('sum-cat-label').textContent =
+        SaidRunStore.getCategoryLabel(p.category) + ' (' + SaidRunStore.getShortTypeLabel(p.participantType) + ')';
+      document.getElementById('sum-base-price').textContent = SaidRunStore.formatRupiah(p.basePrice);
+
+      var insRow = document.getElementById('sum-ins-row');
+      insRow.classList.toggle('hidden', !p.insurance);
+
+      var promoRow = document.getElementById('sum-promo-row');
+      if (appliedPromo && p.discount > 0) {
+        promoRow.classList.remove('hidden');
+        document.getElementById('sum-promo-label').textContent = 'Promo ' + appliedPromo.code;
+        document.getElementById('sum-promo-amount').textContent = '-' + SaidRunStore.formatRupiah(p.discount);
+      } else {
+        promoRow.classList.add('hidden');
+      }
+
+      document.getElementById('sum-total-price').textContent = SaidRunStore.formatRupiah(p.total);
+    }
+
+    function applyPromoCode() {
+      var code = document.getElementById('f-promo').value.trim().toUpperCase();
+      var db = SaidRunStore.loadDB();
+      var fb = document.getElementById('promo-feedback');
+
+      if (!code) {
+        appliedPromo = null;
+        fb.textContent = 'Kode promo dihapus.';
+        fb.className = 'font-body text-body-md text-light-on-surface-variant';
+        fb.classList.remove('hidden');
+        onPricingChange();
+        return;
+      }
+
+      var found = db.promoCodes[code];
+      if (found) {
+        appliedPromo = found;
+        fb.textContent = 'Kode ' + found.code + ' berhasil diterapkan (-' + SaidRunStore.formatRupiah(found.discount) + ').';
+        fb.className = 'font-body text-body-md text-success';
+        fb.classList.remove('hidden');
+        SaidRunUI.showToast('Promo ' + found.code + ' diterapkan!', 'success');
+      } else {
+        appliedPromo = null;
+        fb.textContent = 'Kode promo "' + code + '" tidak valid atau sudah habis.';
+        fb.className = 'font-body text-body-md text-light-error';
+        fb.classList.remove('hidden');
+        SaidRunUI.showToast('Kode promo tidak ditemukan.', 'warning');
+      }
+      onPricingChange();
+    }
+
+    function validateStep(step) {
+      if (step === 1) {
+        var req1 = [
+          { id: 'f-fullname', name: 'Nama Lengkap' },
+          { id: 'f-bibname', name: 'Nama pada BIB' },
+          { id: 'f-nimnik', name: 'NIM / NIK' },
+          { id: 'f-email', name: 'Email Aktif' },
+          { id: 'f-phone', name: 'Nomor HP' }
+        ];
+        for (var i = 0; i < req1.length; i++) {
+          var el = document.getElementById(req1[i].id);
+          if (!el.value.trim()) {
+            el.focus();
+            SaidRunUI.showToast(req1[i].name + ' wajib diisi.', 'warning');
+            return false;
+          }
+        }
+      }
+      if (step === 2) {
+        var req2 = [
+          { id: 'f-emergency-name', name: 'Nama Kontak Darurat' },
+          { id: 'f-emergency-rel', name: 'Hubungan Kontak Darurat' },
+          { id: 'f-emergency-phone', name: 'Nomor Kontak Darurat' }
+        ];
+        for (var j = 0; j < req2.length; j++) {
+          var el2 = document.getElementById(req2[j].id);
+          if (!el2.value.trim()) {
+            el2.focus();
+            SaidRunUI.showToast(req2[j].name + ' wajib diisi.', 'warning');
+            return false;
+          }
+        }
+      }
+      if (step === 3) {
+        if (!document.getElementById('f-waiver').checked) {
+          SaidRunUI.showToast('Anda wajib menyetujui Pernyataan Waiver sebelum melanjutkan.', 'warning');
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function tryGoToStep(target) {
+      if (target > currentStep) {
+        for (var s = currentStep; s < target; s++) {
+          if (!validateStep(s)) return;
+        }
+      }
+      if (target === 4 && !activeTrxParticipantId) {
+        createQrisInvoice();
+        return;
+      }
+      goToStep(target);
+    }
+
     function goToStep(step) {
+      currentStep = step;
       for (var i = 1; i <= 4; i++) {
         var panel = document.getElementById('step-panel-' + i);
         var btn = document.getElementById('step-btn-' + i);
+        var num = document.getElementById('step-num-' + i);
         if (i === step) {
           panel.classList.remove('hidden');
           btn.classList.add('bg-light-surface-container-low', 'border-light-primary');
           btn.classList.remove('border-transparent');
+          num.classList.add('bg-light-primary', 'text-light-on-primary');
+          num.classList.remove('bg-light-surface-container', 'text-light-on-surface-variant');
         } else {
           panel.classList.add('hidden');
           btn.classList.remove('bg-light-surface-container-low', 'border-light-primary');
           btn.classList.add('border-transparent');
+          num.classList.remove('bg-light-primary', 'text-light-on-primary');
+          num.classList.add('bg-light-surface-container', 'text-light-on-surface-variant');
         }
       }
     }
+
+    function createQrisInvoice() {
+      if (!validateStep(1) || !validateStep(2) || !validateStep(3)) return;
+
+      var pricing = getPricingBreakdown();
+      var newParticipant = SaidRunStore.addParticipant({
+        category: pricing.category,
+        participantType: pricing.participantType,
+        fullName: document.getElementById('f-fullname').value.trim(),
+        bibName: document.getElementById('f-bibname').value.trim(),
+        nimNik: document.getElementById('f-nimnik').value.trim(),
+        jerseySize: document.getElementById('f-jersey').value,
+        email: document.getElementById('f-email').value.trim(),
+        phone: document.getElementById('f-phone').value.trim(),
+        community: document.getElementById('f-community').value.trim(),
+        emergencyName: document.getElementById('f-emergency-name').value.trim(),
+        emergencyRelation: document.getElementById('f-emergency-rel').value.trim(),
+        emergencyPhone: document.getElementById('f-emergency-phone').value.trim(),
+        bloodType: document.getElementById('f-blood').value,
+        medicalHistory: document.getElementById('f-medical').value.trim(),
+        insurance: pricing.insurance,
+        promoCode: appliedPromo ? appliedPromo.code : '',
+        discountAmount: pricing.discount,
+        basePrice: pricing.basePrice,
+        totalAmount: pricing.total
+      });
+
+      activeTrxParticipantId = newParticipant.id;
+      document.getElementById('qris-trx-id').textContent = 'ID: ' + newParticipant.trxId;
+      document.getElementById('qris-amount-badge').textContent = SaidRunStore.formatRupiah(newParticipant.totalAmount);
+      document.getElementById('qris-svg-box').innerHTML = SaidRunUI.generateQrSvg(newParticipant.trxId, 168);
+
+      document.getElementById('qris-pending-actions').classList.remove('hidden');
+      document.getElementById('qris-verified-box').classList.add('hidden');
+      document.getElementById('qris-issue-box').classList.add('hidden');
+
+      startCountdown(24 * 3600 - 1);
+      goToStep(4);
+      SaidRunUI.showToast('Tagihan QRIS ' + newParticipant.trxId + ' diterbitkan!', 'success');
+    }
+
+    function simulatePayment(mode) {
+      if (!activeTrxParticipantId) return;
+      var updated = SaidRunStore.verifyPayment(activeTrxParticipantId, mode);
+      if (!updated) return;
+
+      document.getElementById('qris-pending-actions').classList.add('hidden');
+      if (mode === 'auto') {
+        if (countdownTimer) clearInterval(countdownTimer);
+        document.getElementById('qris-countdown').textContent = 'LUNAS';
+        document.getElementById('qris-countdown').className = 'px-3 py-1 rounded-full bg-success-container text-on-success-container font-mono text-mono-md';
+        document.getElementById('qris-status-desc').textContent = 'Pembayaran terverifikasi otomatis! E-Ticket dan nomor BIB telah diterbitkan.';
+        document.getElementById('qris-bib-issued').textContent = 'Nomor BIB Anda: ' + updated.bib + ' • Token QR: ' + updated.qrToken;
+        document.getElementById('qris-verified-box').classList.remove('hidden');
+        SaidRunUI.showToast('Pembayaran berhasil! BIB ' + updated.bib + ' diterbitkan.', 'success');
+      } else {
+        document.getElementById('qris-status-desc').textContent = 'Status: Perlu Pemeriksaan Admin (Nominal tidak sesuai).';
+        document.getElementById('qris-issue-box').classList.remove('hidden');
+        SaidRunUI.showToast('Transaksi masuk ke antrean Perlu Pemeriksaan Admin.', 'warning');
+      }
+    }
+
+    function startCountdown(seconds) {
+      if (countdownTimer) clearInterval(countdownTimer);
+      var el = document.getElementById('qris-countdown');
+      var remaining = seconds;
+      function tick() {
+        var h = String(Math.floor(remaining / 3600)).padStart(2, '0');
+        var m = String(Math.floor((remaining % 3600) / 60)).padStart(2, '0');
+        var s = String(remaining % 60).padStart(2, '0');
+        el.textContent = h + ':' + m + ':' + s;
+        if (remaining > 0) remaining -= 1;
+      }
+      tick();
+      countdownTimer = setInterval(tick, 1000);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      initForm();
+      document.getElementById('f-bibname').addEventListener('input', function () {
+        this.dataset.touched = '1';
+      });
+    });
   </script>
-
-
-
 </body></html>
