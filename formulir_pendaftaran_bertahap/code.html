@@ -1,0 +1,473 @@
+<!DOCTYPE html><html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Lomba — SAID RUN 2026</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'success': '#0D6E4E',
+        'on-success': '#FFFFFF',
+        'success-container': '#BDFFDD',
+        'on-success-container': '#003826',
+        'warning': '#9A4A00',
+        'on-warning': '#FFFFFF',
+        'warning-container': '#FFDBCE',
+        'on-warning-container': '#5A1C00',
+        'light-primary': '#00543A',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#0D6E4E',
+        'light-on-primary-container': '#98EDC5',
+        'light-secondary': '#A73A00',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#FD651E',
+        'light-on-secondary-container': '#571A00',
+        'light-tertiary': '#793230',
+        'light-on-tertiary': '#FFFFFF',
+        'light-tertiary-container': '#974946',
+        'light-on-tertiary-container': '#FFD1CE',
+        'light-error': '#BA1A1A',
+        'light-on-error': '#FFFFFF',
+        'light-error-container': '#FFDAD6',
+        'light-on-error-container': '#93000A',
+        'light-background': '#F9F9FF',
+        'light-on-background': '#111C2D',
+        'light-surface': '#F9F9FF',
+        'light-surface-dim': '#CFDAF2',
+        'light-surface-bright': '#F9F9FF',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#F0F3FF',
+        'light-surface-container': '#E7EEFF',
+        'light-surface-container-high': '#DEE8FF',
+        'light-surface-container-highest': '#D8E3FB',
+        'light-on-surface': '#111C2D',
+        'light-surface-variant': '#DAE5DD',
+        'light-on-surface-variant': '#3F4943',
+        'light-outline': '#6F7A73',
+        'light-outline-variant': '#BEC9C1',
+        'light-inverse-surface': '#263143',
+        'light-inverse-on-surface': '#ECF1FF',
+        'light-inverse-primary': '#83D7B0',
+        'dark-primary': '#83D7B0',
+        'dark-on-primary': '#003826',
+        'dark-primary-container': '#0D6E4E',
+        'dark-on-primary-container': '#98EDC5',
+        'dark-secondary': '#FFB599',
+        'dark-on-secondary': '#5A1C00',
+        'dark-secondary-container': '#F66018',
+        'dark-on-secondary-container': '#320C00',
+        'dark-tertiary': '#FFB3AF',
+        'dark-on-tertiary': '#5A1A1A',
+        'dark-tertiary-container': '#974946',
+        'dark-on-tertiary-container': '#FFD1CE',
+        'dark-error': '#FFB4AB',
+        'dark-on-error': '#690005',
+        'dark-error-container': '#93000A',
+        'dark-on-error-container': '#FFDAD6',
+        'dark-background': '#081425',
+        'dark-on-background': '#D8E3FB',
+        'dark-surface': '#081425',
+        'dark-surface-dim': '#081425',
+        'dark-surface-bright': '#2F3A4C',
+        'dark-surface-container-lowest': '#040E1F',
+        'dark-surface-container-low': '#111C2D',
+        'dark-surface-container': '#152031',
+        'dark-surface-container-high': '#1F2A3C',
+        'dark-surface-container-highest': '#2A3548',
+        'dark-on-surface': '#D8E3FB',
+        'dark-surface-variant': '#3F4943',
+        'dark-on-surface-variant': '#BEC9C1',
+        'dark-outline': '#88938C',
+        'dark-outline-variant': '#3F4943',
+        'dark-inverse-surface': '#D8E3FB',
+        'dark-inverse-on-surface': '#263143',
+        'dark-inverse-primary': '#086C4C',
+      },
+      borderRadius: {
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Instrument Sans"', 'sans-serif'],
+        'headline': ['"Instrument Sans"', 'sans-serif'],
+        'title': ['"Instrument Sans"', 'sans-serif'],
+        'body': ['"Alata"', 'sans-serif'],
+        'label': ['"Instrument Sans"', 'sans-serif'],
+        'mono': ['"Red Hat Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['48px', { lineHeight: '54px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg': ['34px', { lineHeight: '42px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg-mobile': ['26px', { lineHeight: '32px', letterSpacing: '-0.15px', fontWeight: '700' }],
+        'headline-md': ['24px', { lineHeight: '30px', letterSpacing: '-0.1px', fontWeight: '700' }],
+        'title-lg': ['20px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['16px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '600' }],
+        'body-lg': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.1px', fontWeight: '600' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '600' }],
+        'mono-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'mono-lg': ['20px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '600' }],
+      },
+      transitionDuration: {
+        'state-change': '100ms',
+        'surface-enter': '200ms',
+        'surface-exit': '150ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&amp;family=Instrument+Sans:wght@500;600;700&amp;family=Red+Hat+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-light-surface text-light-on-surface font-body antialiased min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+  <!-- Task Flow Header -->
+  <header class="bg-light-surface-container-lowest border-b border-light-outline-variant/60">
+    <div class="max-w-5xl mx-auto px-gutter-lg h-16 flex items-center justify-between gap-gutter-md">
+      <a href="../halaman-utama/HalamanUtama.html" class="inline-flex items-center gap-gutter-sm font-label text-label-lg text-light-on-surface-variant hover:text-light-primary transition-colors duration-state-change">
+        <span class="material-symbols-outlined" style="font-size: 20px;" aria-hidden="true">arrow_back</span>
+        <span data-design-text-token="label-lg">Kembali ke Informasi Event</span>
+      </a>
+      <div class="flex items-center gap-gutter-sm">
+        <span class="w-7 h-7 rounded bg-light-primary text-light-on-primary flex items-center justify-center font-label text-label-sm">SR</span>
+        <span class="font-headline text-title-md text-light-on-surface" data-design-text-token="title-md">Pendaftaran SAID RUN 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-5xl w-full mx-auto px-gutter-lg py-gutter-xl flex flex-col gap-gutter-xl">
+    <!-- 4-Step Progress Stepper (KNF-05) -->
+    <nav aria-label="Tahapan pendaftaran" class="bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-md">
+      <ol class="grid grid-cols-2 md:grid-cols-4 gap-gutter-md">
+        <li>
+          <button type="button" onclick="goToStep(1)" id="step-btn-1" class="w-full text-left flex items-center gap-gutter-sm p-gutter-sm rounded bg-light-surface-container-low border border-light-primary">
+            <span class="w-7 h-7 rounded-full bg-light-primary text-light-on-primary flex items-center justify-center font-mono text-mono-md">1</span>
+            <div class="flex flex-col">
+              <span class="font-label text-label-sm text-light-primary" data-design-text-token="label-sm">Tahap 1</span>
+              <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Kategori &amp; Profil</span>
+            </div>
+          </button>
+        </li>
+        <li>
+          <button type="button" onclick="goToStep(2)" id="step-btn-2" class="w-full text-left flex items-center gap-gutter-sm p-gutter-sm rounded border border-transparent hover:bg-light-surface-container-low">
+            <span class="w-7 h-7 rounded-full bg-light-surface-container text-light-on-surface-variant flex items-center justify-center font-mono text-mono-md">2</span>
+            <div class="flex flex-col">
+              <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Tahap 2</span>
+              <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Kontak Darurat</span>
+            </div>
+          </button>
+        </li>
+        <li>
+          <button type="button" onclick="goToStep(3)" id="step-btn-3" class="w-full text-left flex items-center gap-gutter-sm p-gutter-sm rounded border border-transparent hover:bg-light-surface-container-low">
+            <span class="w-7 h-7 rounded-full bg-light-surface-container text-light-on-surface-variant flex items-center justify-center font-mono text-mono-md">3</span>
+            <div class="flex flex-col">
+              <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Tahap 3</span>
+              <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Promo &amp; Waiver</span>
+            </div>
+          </button>
+        </li>
+        <li>
+          <button type="button" onclick="goToStep(4)" id="step-btn-4" class="w-full text-left flex items-center gap-gutter-sm p-gutter-sm rounded border border-transparent hover:bg-light-surface-container-low">
+            <span class="w-7 h-7 rounded-full bg-light-surface-container text-light-on-surface-variant flex items-center justify-center font-mono text-mono-md">4</span>
+            <div class="flex flex-col">
+              <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Tahap 4</span>
+              <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Pembayaran QRIS</span>
+            </div>
+          </button>
+        </li>
+      </ol>
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-start">
+      <!-- Form Area -->
+      <div class="lg:col-span-8 flex flex-col gap-gutter-lg">
+
+        <!-- STEP 1: Kategori & Profil -->
+        <section id="step-panel-1" class="bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-lg">
+          <div class="flex items-center justify-between gap-gutter-md border-b border-light-outline-variant/40 pb-gutter-md">
+            <div>
+              <h1 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">1. Kategori Lomba &amp; Profil Peserta</h1>
+              <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Data profil akun terisi otomatis dan dapat dipakai ulang di event berikutnya.</p>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-success-container text-on-success-container font-label text-label-sm" data-design-text-token="label-sm">Akun Aktif</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-md">
+            <label class="flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Kategori Lomba</span>
+              <select class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+                <option value="5k" selected>5K Fun Run (Sisa 164 kuota)</option>
+                <option value="10k">10K Competitive (Sisa 54 kuota)</option>
+              </select>
+            </label>
+
+            <label class="flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Kategori Peserta</span>
+              <select class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+                <option value="civitas" selected>Civitas UIN RMS (Wajib NIM/NIK)</option>
+                <option value="alumni">Alumni (Wajib Bukti Kelulusan)</option>
+                <option value="umum">Umum</option>
+              </select>
+            </label>
+
+            <label data-component-id="input-field-text" data-component-type="input-field" data-component-variant="text" class="flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Nama Lengkap</span>
+              <input type="text" value="Luthfiya Zuhura" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+            </label>
+
+            <label data-component-id="input-field-text" data-component-type="input-field" data-component-variant="text" class="flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Nama pada BIB</span>
+              <input type="text" value="LUTHFIYA Z." class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+            </label>
+
+            <label class="flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">NIM / NIK Civitas</span>
+              <input type="text" value="247411008" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-mono text-mono-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+            </label>
+
+            <label class="flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Ukuran Jersey</span>
+              <select class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+                <option value="S">S (Lebar 48 cm)</option>
+                <option value="M" selected>M (Lebar 50 cm)</option>
+                <option value="L">L (Lebar 52 cm)</option>
+                <option value="XL">XL (Lebar 54 cm)</option>
+              </select>
+            </label>
+
+            <label class="flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Nomor HP (WhatsApp)</span>
+              <input type="tel" value="081298765432" inputmode="numeric" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-mono text-mono-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+            </label>
+
+            <label class="flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Asal Komunitas (Opsional)</span>
+              <input type="text" value="Sains Data Runners" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+            </label>
+          </div>
+
+          <div class="pt-gutter-md border-t border-light-outline-variant/40 flex justify-end">
+            <button type="button" onclick="goToStep(2)" class="inline-flex items-center gap-2 px-6 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container transition-colors duration-state-change">
+              <span data-design-text-token="label-lg">Lanjut ke Kontak Darurat</span>
+              <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">arrow_forward</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- STEP 2: Kontak Darurat & Kesehatan -->
+        <section id="step-panel-2" class="hidden bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-lg">
+          <div class="border-b border-light-outline-variant/40 pb-gutter-md">
+            <h2 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">2. Kontak Darurat &amp; Data Kesehatan</h2>
+            <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Sesuai UU PDP No. 27/2022, data kesehatan hanya diakses petugas medis berwenang saat darurat.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-md">
+            <label class="flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Nama Kontak Darurat</span>
+              <input type="text" value="Ahmad Fuadi" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+            </label>
+
+            <label class="flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Hubungan</span>
+              <input type="text" value="Orang Tua" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+            </label>
+
+            <label class="flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Nomor Kontak Darurat</span>
+              <input type="tel" value="081345678901" inputmode="numeric" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-mono text-mono-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+            </label>
+
+            <label class="flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Golongan Darah</span>
+              <select class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="AB">AB</option>
+                <option value="O" selected>O</option>
+              </select>
+            </label>
+
+            <label class="md:col-span-2 flex flex-col gap-1.5">
+              <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Riwayat Penyakit / Alergi / Obat Tertentu</span>
+              <textarea rows="3" placeholder="Tuliskan jika ada, atau isi &#39;Tidak ada&#39;" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-body text-body-md text-light-on-surface focus:border-light-primary focus:ring-1 focus:ring-light-primary">Tidak ada riwayat penyakit atau alergi obat.</textarea>
+            </label>
+          </div>
+
+          <div class="pt-gutter-md border-t border-light-outline-variant/40 flex items-center justify-between">
+            <button type="button" onclick="goToStep(1)" class="px-5 py-2.5 rounded bg-light-surface-container-lowest text-light-primary border border-light-outline-variant font-label text-label-lg hover:bg-light-surface-container-low">
+              <span data-design-text-token="label-lg">Kembali</span>
+            </button>
+            <button type="button" onclick="goToStep(3)" class="inline-flex items-center gap-2 px-6 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
+              <span data-design-text-token="label-lg">Lanjut ke Promo &amp; Waiver</span>
+              <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">arrow_forward</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- STEP 3: Promo, Asuransi & Waiver -->
+        <section id="step-panel-3" class="hidden bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-lg">
+          <div class="border-b border-light-outline-variant/40 pb-gutter-md">
+            <h2 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">3. Kode Promo, Asuransi &amp; Persetujuan Waiver</h2>
+            <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Waiver wajib disetujui sebelum tagihan pembayaran diterbitkan dan kuota ditahan.</p>
+          </div>
+
+          <div class="flex flex-col gap-gutter-md">
+            <div class="flex flex-col sm:flex-row gap-gutter-sm items-end">
+              <label class="flex-1 flex flex-col gap-1.5">
+                <span class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Kode Promo (Opsional)</span>
+                <input type="text" value="SAIDHEMAT10" class="w-full rounded border border-light-outline-variant bg-light-surface-container-lowest px-3.5 py-2.5 font-mono text-mono-md text-light-on-surface">
+              </label>
+              <button type="button" class="px-5 py-2.5 rounded bg-light-surface-container-low text-light-primary border border-light-outline-variant font-label text-label-lg hover:bg-light-surface-container">
+                <span data-design-text-token="label-lg">Terapkan Kode</span>
+              </button>
+            </div>
+
+            <label class="flex items-start gap-gutter-md p-gutter-md rounded border border-light-outline-variant bg-light-surface-container-low cursor-pointer">
+              <input type="checkbox" checked class="mt-1 rounded border-light-outline text-light-primary focus:ring-light-primary">
+              <div class="flex-1 flex items-center justify-between gap-gutter-md">
+                <div>
+                  <p class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Tambahkan Asuransi Perlindungan Lomba</p>
+                  <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Perlindungan kecelakaan diri selama pelaksanaan SAID RUN 2026 (e-polis dikirim via email).</p>
+                </div>
+                <span class="font-mono text-mono-md text-light-primary tabular-nums" data-design-text-token="mono-md">+Rp 15.000</span>
+              </div>
+            </label>
+
+            <div class="p-gutter-md rounded border border-light-outline-variant/80 bg-light-surface-container-lowest flex flex-col gap-gutter-sm">
+              <h3 class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Pernyataan Persetujuan (Waiver) — Wajib</h3>
+              <label class="flex items-start gap-gutter-sm cursor-pointer">
+                <input type="checkbox" checked class="mt-1 rounded border-light-outline text-light-primary focus:ring-light-primary">
+                <span class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Saya menyetujui syarat &amp; ketentuan lomba, pernyataan risiko kesehatan (disclaimer), serta izin penggunaan dokumentasi foto/video oleh panitia SAID RUN.</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="pt-gutter-md border-t border-light-outline-variant/40 flex items-center justify-between">
+            <button type="button" onclick="goToStep(2)" class="px-5 py-2.5 rounded bg-light-surface-container-lowest text-light-primary border border-light-outline-variant font-label text-label-lg hover:bg-light-surface-container-low">
+              <span data-design-text-token="label-lg">Kembali</span>
+            </button>
+            <button type="button" onclick="goToStep(4)" class="inline-flex items-center gap-2 px-6 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
+              <span data-design-text-token="label-lg">Buat Tagihan QRIS</span>
+              <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">qr_code_2</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- STEP 4: Pembayaran QRIS -->
+        <section id="step-panel-4" class="hidden bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-lg">
+          <div class="flex items-center justify-between gap-gutter-md border-b border-light-outline-variant/40 pb-gutter-md">
+            <div>
+              <h2 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">4. Pembayaran QRIS &amp; Verifikasi Otomatis</h2>
+              <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Status saat ini: Menunggu Pembayaran. Kuota Anda ditahan hingga batas waktu berakhir.</p>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-warning-container text-on-warning-container font-mono text-mono-md tabular-nums" data-design-text-token="mono-md">23:54:12</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg items-center">
+            <div class="bg-light-surface-container-low rounded-lg p-gutter-lg flex flex-col items-center gap-gutter-md border border-light-outline-variant/60">
+              <div class="w-44 h-44 bg-light-surface-container-lowest rounded border border-light-outline-variant flex items-center justify-center">
+                <span class="material-symbols-outlined text-light-on-surface" style="font-size: 120px;" aria-hidden="true">qr_code_2</span>
+              </div>
+              <span class="font-mono text-mono-md text-light-on-surface tabular-nums" data-design-text-token="mono-md">ID: TRX-SR26-08914</span>
+            </div>
+
+            <div class="flex flex-col gap-gutter-md">
+              <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">
+                Pindai kode QRIS menggunakan aplikasi e-wallet atau mobile banking Anda. Setelah pembayaran berhasil, sistem akan memverifikasi otomatis dan mengirimkan E-Ticket ke email Anda.
+              </p>
+              <a href="../dashboard-peserta/DashboardPeserta.html" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-light-primary-container">
+                <span data-design-text-token="label-lg">Cek Status di Dashboard Peserta</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Sticky Order Summary -->
+      <aside class="lg:col-span-4 bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-md">
+        <h2 class="font-title text-title-lg text-light-on-surface border-b border-light-outline-variant/40 pb-gutter-sm" data-design-text-token="title-lg">
+          Ringkasan Biaya
+        </h2>
+
+        <div class="flex flex-col gap-gutter-sm font-body text-body-md">
+          <div class="flex items-center justify-between">
+            <span class="text-light-on-surface-variant">5K Fun Run (Civitas)</span>
+            <span class="font-mono text-mono-md text-light-on-surface tabular-nums">Rp 110.000</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-light-on-surface-variant">Asuransi Lomba</span>
+            <span class="font-mono text-mono-md text-light-on-surface tabular-nums">Rp 15.000</span>
+          </div>
+          <div class="flex items-center justify-between text-light-primary">
+            <span>Promo SAIDHEMAT10</span>
+            <span class="font-mono text-mono-md tabular-nums">-Rp 10.000</span>
+          </div>
+        </div>
+
+        <div class="pt-gutter-md border-t border-light-outline-variant/60 flex items-center justify-between">
+          <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Total Tagihan</span>
+          <span class="font-mono text-mono-lg text-light-primary tabular-nums" data-design-text-token="mono-lg">Rp 115.000</span>
+        </div>
+
+        <div class="p-gutter-sm rounded bg-light-surface-container-low flex items-start gap-gutter-sm">
+          <span class="material-symbols-outlined text-light-primary" style="font-size: 18px;" aria-hidden="true">lock</span>
+          <span class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Kuota dikunci aman selama transaksi berlangsung agar tidak terlampaui.</span>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    function goToStep(step) {
+      for (var i = 1; i <= 4; i++) {
+        var panel = document.getElementById('step-panel-' + i);
+        var btn = document.getElementById('step-btn-' + i);
+        if (i === step) {
+          panel.classList.remove('hidden');
+          btn.classList.add('bg-light-surface-container-low', 'border-light-primary');
+          btn.classList.remove('border-transparent');
+        } else {
+          panel.classList.add('hidden');
+          btn.classList.remove('bg-light-surface-container-low', 'border-light-primary');
+          btn.classList.add('border-transparent');
+        }
+      }
+    }
+  </script>
+
+
+
+</body></html>
